@@ -6,8 +6,6 @@
 
 export const ETABLISSEMENT = {
   nom: "Collège de la Providence",
-  /** Congrégation de tutelle, portée par les propriétés du diaporama source. */
-  tutelle: "Carmélites",
   /**
    * Ville et pays. Ils ne sont pas encore arrêtés : laissés vides, ils sont
    * simplement omis partout ; renseignés, ils s’affichent dans le pied de page

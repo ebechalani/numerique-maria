@@ -80,7 +80,7 @@ export default function Accueil() {
       {/* En-tête éditorial */}
       <header className="max-w-3xl">
         <p className="text-xs font-medium tracking-wide text-estompe uppercase">
-          {ETABLISSEMENT.nom} <Point /> {ETABLISSEMENT.tutelle}
+          {ETABLISSEMENT.nom}
           {LOCALISATION ? (
             <>
               {" "}

@@ -27,10 +27,6 @@ export default function PiedDePage() {
                 {LOCALISATION}
               </>
             ) : null}
-            <br />
-            <span className="text-estompe">
-              Sous tutelle des {ETABLISSEMENT.tutelle}
-            </span>
           </p>
         </section>
 

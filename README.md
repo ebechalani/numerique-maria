@@ -1,9 +1,8 @@
 # Numérique — plateforme de formation du Collège de la Providence
 
-Site des formations de la référente numérique du Collège de la Providence
-(établissement sous tutelle des Carmélites). Les enseignants y suivent une
-formation module par module, y répondent aux questions posées en séance et y
-retrouvent les ressources après coup.
+Site des formations de la référente numérique du Collège de la Providence. Les
+enseignants y suivent une formation module par module, y répondent aux
+questions posées en séance et y retrouvent les ressources après coup.
 
 Première formation publiée : **« IA générative au service de la classe — Créer
 de meilleurs prompts · Utiliser ChatGPT avec méthode »** (année 2026-2027, deux
