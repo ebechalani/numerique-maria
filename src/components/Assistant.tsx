@@ -21,10 +21,10 @@ interface MessageAffiche {
 const COURRIEL_REFERENT = REFERENT.courriel;
 
 const MESSAGE_NON_CONFIGURE = CONTACT_OUVERT
-  ? "L’assistant n’est pas configuré sur ce site. Pour une question sur la formation, écrivez au référent numérique : " +
+  ? "L’assistant n’est pas configuré sur ce site. Pour une question sur la formation, écrivez à la référente numérique : " +
     COURRIEL_REFERENT +
     "."
-  : "L’assistant n’est pas configuré sur ce site. Pour une question sur la formation, adressez-vous au référent numérique de l’établissement.";
+  : "L’assistant n’est pas configuré sur ce site. Pour une question sur la formation, adressez-vous à la référente numérique de l’établissement.";
 
 const MESSAGE_GENERIQUE =
   "La réponse n’a pas pu être obtenue. Réessayez dans un instant.";

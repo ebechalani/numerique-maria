@@ -52,7 +52,7 @@ export default function PageIntrouvable() {
                     Retour à l’accueil
                   </span>
                   <span className="mt-1 block text-sm leading-relaxed text-graphite">
-                    Le catalogue des formations du référent numérique.
+                    Le catalogue des formations de la référente numérique.
                   </span>
                 </span>
               </Link>

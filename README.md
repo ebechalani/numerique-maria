@@ -1,6 +1,6 @@
 # Numérique — plateforme de formation du Collège de la Providence
 
-Site des formations du référent numérique du Collège de la Providence
+Site des formations de la référente numérique du Collège de la Providence
 (établissement sous tutelle des Carmélites). Les enseignants y suivent une
 formation module par module, y répondent aux questions posées en séance et y
 retrouvent les ressources après coup.
@@ -75,10 +75,10 @@ Le détail de chaque variable est commenté dans `.env.example`.
 Quatre valeurs ne sont pas encore arrêtées et sont laissées vides plutôt que
 devinées :
 
-- **L’adresse de contact du référent numérique** — `src/content/site.ts`, champ
+- **L’adresse de contact de la référente numérique** — `src/content/site.ts`, champ
   `courriel` de `REFERENT`, et `formateur.email` dans le fichier de la
   formation. Tant qu’ils sont vides, aucun lien « Contact » ni aucune adresse
-  n’apparaît, et l’assistant renvoie vers le référent sans citer d’adresse.
+  n’apparaît, et l’assistant renvoie vers la référente sans citer d’adresse.
 - **La ville et le pays de l’établissement** — `src/content/site.ts`, champs
   `lieu` et `pays`. Laissés vides, ils ne sont simplement pas affichés ;
   renseignés, ils apparaissent dans le pied de page et sur l’accueil.
@@ -114,7 +114,7 @@ src/
     api/                    assistant, réponses, restitutions, animateur
   content/
     types.ts                contrat de contenu (blocs, modules, questionnaires)
-    site.ts                 identité de l’établissement et du référent
+    site.ts                 identité de l’établissement et de la référente
     outils/actif.ts         la méthode ACTIF, transcrite du diaporama
     formations/<slug>/      contenu d’une formation, décrit en données
   components/               rendu des blocs, interactifs, formulaires, graphiques

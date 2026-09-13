@@ -19,16 +19,16 @@ export const ETABLISSEMENT = {
 
 export const REFERENT = {
   nom: "Maria Bachaalany",
-  role: "référent numérique",
+  role: "référente numérique",
   /**
    * Adresse de contact. Tant qu’elle est vide, aucun lien « Contact » ni
-   * aucune adresse ne s’affiche, et l’assistant renvoie vers le référent
+   * aucune adresse ne s’affiche, et l’assistant renvoie vers la référente
    * numérique sans citer d’adresse. La renseigner ici suffit à tout activer.
    */
   courriel: "",
 } as const;
 
-/** « Maria Bachaalany, référent numérique » */
+/** « Maria Bachaalany, référente numérique » */
 export const SIGNATURE = `${REFERENT.nom}, ${REFERENT.role}`;
 
 /** Initiales affichées dans la pastille de l’accueil : « MB ». */

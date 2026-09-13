@@ -42,7 +42,7 @@ export const iaGenerativeEnClasse: Formation = {
 
   formateur: {
     nom: "Maria Bachaalany",
-    role: "Référent numérique",
+    role: "Référente numérique",
     /* Vide tant que l’adresse n’est pas arrêtée : elle n’est alors pas affichée. */
     email: "",
   },

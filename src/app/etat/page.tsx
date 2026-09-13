@@ -140,7 +140,7 @@ export default async function PageEtat() {
           }
           action={
             baseReliee && !connexionOk
-              ? "La base existe mais ne répond pas au site. Sur Vercel, onglet Storage : vérifier que la base est bien reliée à ce projet et active, puis Redeploy. Si le problème persiste, envoyer une capture de cette page au référent numérique."
+              ? "La base existe mais ne répond pas au site. Sur Vercel, onglet Storage : vérifier que la base est bien reliée à ce projet et active, puis Redeploy. Si le problème persiste, envoyer une capture de cette page à la référente numérique."
               : undefined
           }
         />

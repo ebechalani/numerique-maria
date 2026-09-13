@@ -91,7 +91,7 @@ export default function Accueil() {
           Numérique
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-graphite sm:text-xl">
-          L’espace de formation du référent numérique : suivre les formations,
+          L’espace de formation de la référente numérique : suivre les formations,
           retrouver les ressources, poser ses questions.
         </p>
         <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-graphite">

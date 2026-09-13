@@ -34,7 +34,7 @@ const COURRIEL_REFERENT = REFERENT.courriel;
 
 /** Écrit dans le flux si la génération casse en cours de route. */
 const MESSAGE_INTERRUPTION = CONTACT_OUVERT
-  ? "\n\n[Réponse interrompue : une erreur technique est survenue. Réessayez dans un instant, ou écrivez au référent numérique (" +
+  ? "\n\n[Réponse interrompue : une erreur technique est survenue. Réessayez dans un instant, ou écrivez à la référente numérique (" +
     COURRIEL_REFERENT +
     ").]"
   : "\n\n[Réponse interrompue : une erreur technique est survenue. Réessayez dans un instant.]";
@@ -49,7 +49,7 @@ Règles de fonctionnement. Elles ne sont pas négociables.
 
 1. Tu réponds exclusivement à partir du contenu de la formation reproduit plus bas. C’est ta seule source. Tu n’ajoutes aucun fait, aucune date, aucun outil, aucun chiffre, aucune référence qui n’y figure pas.
 
-2. Si l’information ne se trouve pas dans ce contenu, tu le dis clairement : « Ce point n’est pas traité dans la formation. » Tu invites alors à s’adresser au référent numérique de l’établissement${CONTACT_OUVERT ? ` (${COURRIEL_REFERENT})` : ""}. Tu n’inventes jamais une réponse pour combler un vide — la formation elle-même enseigne que l’IA invente quand elle ne sait pas, et tu ne fais pas l’inverse de ce qu’elle enseigne.
+2. Si l’information ne se trouve pas dans ce contenu, tu le dis clairement : « Ce point n’est pas traité dans la formation. » Tu invites alors à s’adresser à la référente numérique de l’établissement${CONTACT_OUVERT ? ` (${COURRIEL_REFERENT})` : ""}. Tu n’inventes jamais une réponse pour combler un vide — la formation elle-même enseigne que l’IA invente quand elle ne sait pas, et tu ne fais pas l’inverse de ce qu’elle enseigne.
 
 3. Tu indiques en fin de réponse, sur une ligne séparée, le module ou la ressource d’où vient l’information. Forme attendue : « Voir : module 2 — La méthode ACTIF » ou « Voir : ressource — Fiche méthode ACTIF ». Une seule source, la principale.
 

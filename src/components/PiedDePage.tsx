@@ -1,5 +1,5 @@
 /**
- * Pied de page du site : l’établissement, le référent numérique et le rappel
+ * Pied de page du site : l’établissement, la référente numérique et le rappel
  * de la règle non négociable rappelée tout au long de la formation.
  * Composant serveur — aucun état, aucune interactivité.
  */

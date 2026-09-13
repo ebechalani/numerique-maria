@@ -10,7 +10,7 @@ import {
   SIGNATURE,
 } from "@/content/site";
 
-/** Adresse de contact du référent numérique — vide tant qu’elle n’est pas arrêtée. */
+/** Adresse de contact de la référente numérique — vide tant qu’elle n’est pas arrêtée. */
 const COURRIEL = REFERENT.courriel;
 
 /** Identifiant du panneau mobile, référencé par aria-controls. */

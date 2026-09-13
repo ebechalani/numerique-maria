@@ -174,8 +174,8 @@ export async function POST(requete: Request): Promise<Response> {
   if (!codeCorrespond(brut, secret)) {
     return erreur(
       "code-refuse",
-      "Code d’accès incorrect. Vérifiez la saisie, ou demandez le code au " +
-        "référent numérique.",
+      "Code d’accès incorrect. Vérifiez la saisie, ou demandez le code à la " +
+        "référente numérique.",
       401,
     );
   }
