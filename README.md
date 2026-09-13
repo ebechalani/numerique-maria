@@ -37,6 +37,9 @@ comme fil rouge et complétés pour l’élémentaire, le collège et le lycée.
   du contenu de la formation, et cite le module ou la ressource source.
 - **Rédacteur de prompt ACTIF** : un outil autonome, hors formation, qui
   compose un prompt en cinq étapes et le rend prêt à coller.
+- **Tutoriels d’outils** : la prise en main de chaque outil utilisé en
+  formation, pas à pas, avec une check-list à cocher pendant qu’on manipule.
+  Publié à ce jour : NotebookLM. Ces tutoriels alimentent aussi l’assistant.
 - **Ressources** : fiche méthode ACTIF, bibliothèque de dix-neuf requêtes
   classées par cycle, questions fréquentes, déroulé animateur.
 
@@ -111,15 +114,18 @@ src/
     formations/[formation]/ page de formation, modules, ressources,
                             questionnaires participants, tableau animateur
     outils/                 rédacteur de prompt ACTIF
+    tutoriels/              catalogue et page d’un tutoriel d’outil
     api/                    assistant, réponses, restitutions, animateur
   content/
     types.ts                contrat de contenu (blocs, modules, questionnaires)
     site.ts                 identité de l’établissement et de la référente
     outils/actif.ts         la méthode ACTIF, transcrite du diaporama
+    tutoriels/<slug>.ts     prise en main d’un outil, décrite en données
     formations/<slug>/      contenu d’une formation, décrit en données
   components/               rendu des blocs, interactifs, formulaires, graphiques
   lib/
     formations.ts           registre des formations et accès au contenu
+    tutoriels.ts            registre des tutoriels d’outils
     corpus.ts               corpus de l’assistant, dérivé du même contenu
     progression.ts          progression locale (localStorage)
     db.ts, animateur.ts     accès Postgres, session animateur
@@ -129,6 +135,21 @@ scripts/init-db.mjs         application du schéma
 
 Tout le contenu pédagogique est écrit en données, jamais en JSX : les pages, le
 corpus de l’assistant et l’agrégation des résultats partent de la même source.
+
+## Ajouter un tutoriel d’outil
+
+1. Créer `src/content/tutoriels/<slug>.ts` exportant un objet `Tutoriel` (voir
+   `src/content/tutoriels/types.ts`). Le corps se décrit avec les mêmes blocs
+   que les modules, et se rend donc avec le même composant.
+2. L’ajouter au tableau `tutoriels` de `src/lib/tutoriels.ts`, et retirer
+   l’outil de `tutorielsAVenir` s’il y figurait.
+
+Le catalogue, la page de détail et le corpus de l’assistant le prennent en
+compte sans autre modification.
+
+Le champ `interfaceDecrite` est affiché en tête de page : les interfaces des
+outils d’IA changent vite, et un tutoriel qui ne dit pas de quand il date fait
+perdre plus de temps qu’il n’en gagne.
 
 ## Ajouter une formation
 

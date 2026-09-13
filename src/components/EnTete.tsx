@@ -68,6 +68,12 @@ export default function EnTete() {
           >
             Rédacteur de prompt
           </Link>
+          <Link
+            href="/tutoriels"
+            className="text-graphite transition-colors hover:text-accent"
+          >
+            Tutoriels
+          </Link>
           {CONTACT_OUVERT ? (
             <a
               href={`mailto:${COURRIEL}`}
@@ -136,13 +142,22 @@ export default function EnTete() {
           </Link>
           <Link
             href="/outils/redacteur-de-prompt"
+            className="border-b border-trait py-3 text-encre transition-colors hover:text-accent"
+          >
+            Rédacteur de prompt{" "}
+            <span className="block text-xs text-estompe">Méthode ACTIF</span>
+          </Link>
+          <Link
+            href="/tutoriels"
             className={[
               "py-3 text-encre transition-colors hover:text-accent",
               CONTACT_OUVERT ? "border-b border-trait" : "",
             ].join(" ")}
           >
-            Rédacteur de prompt{" "}
-            <span className="block text-xs text-estompe">Méthode ACTIF</span>
+            Tutoriels{" "}
+            <span className="block text-xs text-estompe">
+              La prise en main de chaque outil
+            </span>
           </Link>
           {CONTACT_OUVERT ? (
             <a

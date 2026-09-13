@@ -32,7 +32,7 @@ const MESSAGE_GENERIQUE =
 const QUESTIONS_SUGGEREES = [
   "Que veut dire ACTIF, en une phrase ?",
   "Quelle différence entre ChatGPT et NotebookLM ?",
-  "Mon prompt doit-il être long ?",
+  "Quels documents puis-je importer dans NotebookLM ?",
 ];
 
 /** Distance au bas de la zone en deçà de laquelle on suit le fil du regard. */
@@ -326,7 +326,8 @@ export default function Assistant() {
               <div className="space-y-4">
                 <p className="text-sm leading-relaxed text-graphite">
                   Je réponds à vos questions à partir du contenu de cette
-                  formation — les modules, la fiche méthode, les requêtes. Si la
+                  formation et des tutoriels d’outils — les modules, la fiche
+                  méthode, les requêtes, la prise en main de chaque outil. Si la
                   réponse ne s’y trouve pas, je vous le dis plutôt que de
                   l’inventer.
                 </p>
