@@ -3,7 +3,7 @@ import type { Module } from "@/content/types";
 /**
  * Module 5 — NotebookLM (1:25, 25 min).
  * Source : diapositives 17, 18, 19 et 20 du diaporama « IA générative au
- * service de la maternelle » (Eddy Bachaalany, 2026-2027) et leurs notes de
+ * service de la maternelle » (2026-2027) et leurs notes de
  * l’animateur : la définition de NotebookLM et l’idée clé des documents
  * devenus contexte de travail, les ressources acceptées et ce que l’outil
  * peut produire, le workflow en quatre étapes, puis la démonstration à
@@ -86,7 +86,7 @@ export const notebookLm: Module = {
     {
       type: "paragraphe",
       texte:
-        "En maternelle, cela veut dire : reprendre en points clés un document de plusieurs pages avant une réunion, retrouver ce qui est écrit sur les rituels dans votre projet d’école, ou tirer d’une même source un support de travail pour l’équipe — sans ressaisir le document.",
+        "Concrètement : reprendre en points clés un document de plusieurs pages avant une réunion, retrouver ce que le projet d’établissement dit d’un point précis, tirer d’un chapitre de cours un guide d’étude ou un QCM, ou préparer un support de travail pour l’équipe — sans ressaisir le document. Le geste est le même de la maternelle au lycée : seule change la source que vous importez.",
     },
 
     { type: "titre", texte: "Le workflow en 4 étapes" },
@@ -159,7 +159,7 @@ export const notebookLm: Module = {
       etapes: [
         "Ouvrez notebooklm.google.com et connectez-vous.",
         "Créez un carnet.",
-        "Importez UN document de travail — sans aucune donnée d’enfant.",
+        "Importez UN document de travail — sans aucune donnée d’élève.",
         "Posez une question précise sur ce document.",
         "Demandez une transformation : un résumé, un QCM, une fiche…",
         "Ouvrez une citation et relisez le passage d’origine.",
@@ -169,7 +169,7 @@ export const notebookLm: Module = {
           id: "document-importe",
           type: "texte",
           libelle: "Le document importé",
-          aide: "Titre ou nature du document — sans aucune donnée d’enfant.",
+          aide: "Titre ou nature du document — sans aucune donnée d’élève.",
         },
         {
           id: "question-posee",
@@ -207,7 +207,7 @@ export const notebookLm: Module = {
     {
       type: "notesAnimateur",
       texte:
-        "1:25 — 25 min. Diapositive 17 : posez la transition — jusqu’ici, nous avons appris à mieux parler à l’IA ; avec NotebookLM, nous ajoutons une autre idée, donner à l’IA nos propres sources de référence. Diapositive 18 : Google décrit NotebookLM comme un assistant de recherche alimenté par l’IA ; il travaille à partir de PDF, documents Google, pages web, audio et vidéo, puis répond avec des citations liées aux sources. Diapositive 19 : expliquez les quatre étapes comme une routine, et insistez sur la dernière — NotebookLM aide à retrouver la source, mais l’enseignant relit toujours le passage important. Diapositive 20 : faites la démonstration avec un vrai document si possible. Montrez d’abord une question simple, puis une transformation : QCM, résumé, cas pratique, etc. Terminez en ouvrant une citation pour montrer d’où vient l’information. Pendant l’exercice, prévoyez un document de démonstration pour celles qui n’ont rien apporté, et rappelez qu’aucune donnée d’enfant n’est importée.",
+        "1:25 — 25 min. Diapositive 17 : posez la transition — jusqu’ici, nous avons appris à mieux parler à l’IA ; avec NotebookLM, nous ajoutons une autre idée, donner à l’IA nos propres sources de référence. Diapositive 18 : Google décrit NotebookLM comme un assistant de recherche alimenté par l’IA ; il travaille à partir de PDF, documents Google, pages web, audio et vidéo, puis répond avec des citations liées aux sources. Diapositive 19 : expliquez les quatre étapes comme une routine, et insistez sur la dernière — NotebookLM aide à retrouver la source, mais l’enseignant relit toujours le passage important. Diapositive 20 : faites la démonstration avec un vrai document si possible. Montrez d’abord une question simple, puis une transformation : QCM, résumé, cas pratique, etc. Terminez en ouvrant une citation pour montrer d’où vient l’information. Pendant l’exercice, prévoyez un document de démonstration pour celles qui n’ont rien apporté, et rappelez qu’aucune donnée d’élève n’est importée.",
     },
   ],
 };

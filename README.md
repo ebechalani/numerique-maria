@@ -1,14 +1,20 @@
-# Numérique — plateforme de formation de Providence
+# Numérique — plateforme de formation du Collège de la Providence
 
-Site des formations du référent numérique de Providence (établissement sous
-tutelle des Carmélites). Les enseignantes y suivent une formation module par
-module, y répondent aux questions posées en séance et y retrouvent les
-ressources après coup.
+Site des formations du référent numérique du Collège de la Providence
+(établissement sous tutelle des Carmélites). Les enseignants y suivent une
+formation module par module, y répondent aux questions posées en séance et y
+retrouvent les ressources après coup.
 
-Première formation publiée : **« IA générative au service de la maternelle —
-Créer de meilleurs prompts · Utiliser ChatGPT avec méthode »** (année
-2026-2027, deux heures), transcrite depuis le diaporama de vingt-et-une
-diapositives et ses vingt-et-une pages de notes.
+Première formation publiée : **« IA générative au service de la classe — Créer
+de meilleurs prompts · Utiliser ChatGPT avec méthode »** (année 2026-2027, deux
+heures), destinée aux enseignants de tous les cycles, de la maternelle au
+secondaire.
+
+Elle est transcrite depuis un diaporama de vingt-et-une diapositives et ses
+vingt-et-une pages de notes, « IA générative au service de la maternelle ». La
+méthode ACTIF, les définitions, la check-list et le workflow NotebookLM en sont
+repris sans changement ; ses exemples, tous pris en maternelle, sont conservés
+comme fil rouge et complétés pour l’élémentaire, le collège et le lycée.
 
 ## Ce que le site permet
 
@@ -16,8 +22,8 @@ diapositives et ses vingt-et-une pages de notes.
   dans le navigateur, navigation module précédent / suivant.
 - **Faire les exercices directement sur le site** : vrai/faux et QCM corrigés,
   cas pratiques classés autorisé / encadré / interdit, listes de vérification,
-  constructeur de requête ACTIF, et des exercices guidés où l’enseignante
-  consigne ce qu’elle obtient dans ChatGPT ou NotebookLM puis découvre le
+  constructeur de requête ACTIF, et des exercices guidés où l’enseignant
+  consigne ce qu’il obtient dans ChatGPT ou NotebookLM puis découvre le
   retour de la formation. Chaque module ouvre sur le bilan de ses exercices.
   Les réponses restent locales au navigateur.
 - **Répondre aux questionnaires de la séance** : sondage d’entrée, enquête de
@@ -27,12 +33,12 @@ diapositives et ses vingt-et-une pages de notes.
   QR codes vers les questionnaires, ouverture et fermeture des séances. Protégé
   par un code que l’animateur choisit depuis le site, une fois la base reliée,
   et change à chaque séance.
-- **Assistant IA** : répond aux questions des enseignantes uniquement à partir
+- **Assistant IA** : répond aux questions des enseignants uniquement à partir
   du contenu de la formation, et cite le module ou la ressource source.
 - **Rédacteur de prompt ACTIF** : un outil autonome, hors formation, qui
   compose un prompt en cinq étapes et le rend prêt à coller.
-- **Ressources** : fiche méthode ACTIF, bibliothèque de requêtes pour la
-  maternelle, questions fréquentes, déroulé animateur.
+- **Ressources** : fiche méthode ACTIF, bibliothèque de dix-neuf requêtes
+  classées par cycle, questions fréquentes, déroulé animateur.
 
 ## Démarrer en local
 
@@ -66,9 +72,13 @@ Le détail de chaque variable est commenté dans `.env.example`.
 
 ## À renseigner
 
-Trois valeurs ne figuraient pas dans le diaporama source et sont laissées
-telles quelles plutôt que devinées :
+Quatre valeurs ne sont pas encore arrêtées et sont laissées vides plutôt que
+devinées :
 
+- **L’adresse de contact du référent numérique** — `src/content/site.ts`, champ
+  `courriel` de `REFERENT`, et `formateur.email` dans le fichier de la
+  formation. Tant qu’ils sont vides, aucun lien « Contact » ni aucune adresse
+  n’apparaît, et l’assistant renvoie vers le référent sans citer d’adresse.
 - **La ville et le pays de l’établissement** — `src/content/site.ts`, champs
   `lieu` et `pays`. Laissés vides, ils ne sont simplement pas affichés ;
   renseignés, ils apparaissent dans le pied de page et sur l’accueil.
@@ -77,7 +87,7 @@ telles quelles plutôt que devinées :
   d’une séance ouverte depuis le tableau de bord.
 - **Le minutage de la séance** — le diaporama annonce un atelier de quatre
   minutes mais aucun horaire global. Le programme de deux heures est déduit du
-  contenu, dans `src/content/formations/ia-generative-maternelle/index.ts` et
+  contenu, dans `src/content/formations/ia-generative-en-classe/index.ts` et
   dans le déroulé animateur ; ajustez les deux ensemble.
 
 ## Déploiement
@@ -134,7 +144,7 @@ la prennent en compte sans autre modification.
 
 Deux points restent liés à la première formation, comme dans le site dont
 celui-ci est issu : la trame de restitution et les deux questionnaires sont
-importés depuis `ia-generative-maternelle/ressources/questionnaires.ts` par la
+importés depuis `ia-generative-en-classe/ressources/questionnaires.ts` par la
 couche données et les pages « participer ». Une deuxième formation qui
 apporterait ses propres questionnaires demanderait de les résoudre à partir du
 slug, à ces endroits-là.

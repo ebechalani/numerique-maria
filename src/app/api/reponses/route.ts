@@ -24,7 +24,7 @@
 import {
   enqueteSatisfaction,
   sondageEntree,
-} from "@/content/formations/ia-generative-maternelle/ressources/questionnaires";
+} from "@/content/formations/ia-generative-en-classe/ressources/questionnaires";
 import type {
   Question,
   Questionnaire,

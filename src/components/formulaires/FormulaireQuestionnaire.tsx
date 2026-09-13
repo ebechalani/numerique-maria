@@ -5,7 +5,7 @@
  *
  * Le formulaire est anonyme par construction : il n’envoie que les réponses
  * aux questions déclarées dans le contenu, jamais de nom, d’adresse ni
- * d’identifiant. Aucun champ n’invite à saisir une donnée d’enfant, et le
+ * d’identifiant. Aucun champ n’invite à saisir une donnée d’élève, et le
  * rappel figure sous le bouton d’envoi.
  *
  * L’envoi distingue trois situations côté serveur — collecte fermée (409),
@@ -522,7 +522,7 @@ export default function FormulaireQuestionnaire({
         <p className="text-xs leading-relaxed text-graphite">
           Réponse anonyme&nbsp;: ni nom, ni adresse, ni identifiant ne sont
           enregistrés, et rien ne permet de remonter jusqu’à vous. N’y saisissez
-          aucune donnée personnelle d’enfant — nom, classe, note, situation.
+          aucune donnée personnelle d’élève — nom, classe, note, situation.
         </p>
       </div>
     </form>

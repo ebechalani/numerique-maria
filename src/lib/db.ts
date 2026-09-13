@@ -28,7 +28,7 @@
 
 import { Pool, type QueryResultRow } from "pg";
 
-import * as sourceQuestionnaires from "@/content/formations/ia-generative-maternelle/ressources/questionnaires";
+import * as sourceQuestionnaires from "@/content/formations/ia-generative-en-classe/ressources/questionnaires";
 import type { Question, Questionnaire } from "@/content/types";
 import { SCHEMA_SQL } from "@/lib/schema.generated";
 
@@ -38,7 +38,7 @@ import { SCHEMA_SQL } from "@/lib/schema.generated";
 
 export interface SessionFormation {
   id: number;
-  /** Slug de la formation, ex. « ia-generative-maternelle ». */
+  /** Slug de la formation, ex. « ia-generative-en-classe ». */
   formation: string;
   libelle: string;
   ouverte: boolean;
@@ -73,7 +73,7 @@ export interface Agregat {
 
 export interface Restitution {
   id: number;
-  section: string;
+  niveau: string;
   besoin: string | null;
   membres: string | null;
   outil: string;
@@ -386,7 +386,7 @@ type LigneReponse = {
 
 type LigneRestitution = {
   id: number;
-  section: string;
+  niveau: string;
   besoin: string | null;
   membres: string | null;
   outil: string;
@@ -532,7 +532,7 @@ export async function enregistrerReponse(
 }
 
 /** Champs obligatoires de la trame de restitution. */
-const CHAMPS_RESTITUTION_REQUIS = ["section", "outil", "ressource"] as const;
+const CHAMPS_RESTITUTION_REQUIS = ["niveau", "outil", "ressource"] as const;
 
 function texteOuNull(valeur: string | undefined): string | null {
   const texte = (valeur ?? "").trim();
@@ -542,7 +542,7 @@ function texteOuNull(valeur: string | undefined): string | null {
 /**
  * Enregistre la trame de restitution d'un groupe. Les clés attendues sont
  * celles de la trame :
- * section, besoin, membres, outil, ressource, requete, corrections,
+ * niveau, besoin, membres, outil, ressource, requete, corrections,
  * vigilance.
  */
 export async function enregistrerRestitution(
@@ -558,13 +558,13 @@ export async function enregistrerRestitution(
 
   await interroger(
     `insert into formation_restitution
-       (session_id, formation, section, besoin, membres,
+       (session_id, formation, niveau, besoin, membres,
         outil, ressource, requete, corrections, vigilance)
      values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
     [
       sessionId,
       formation,
-      texteOuNull(champs.section),
+      texteOuNull(champs.niveau),
       texteOuNull(champs.besoin),
       texteOuNull(champs.membres),
       texteOuNull(champs.outil),
@@ -819,7 +819,7 @@ export async function chargerResultats(
       [session.id],
     ),
     interroger<LigneRestitution>(
-      `select id, section, besoin, membres, outil, ressource,
+      `select id, niveau, besoin, membres, outil, ressource,
               requete, corrections, vigilance, envoye_le
          from formation_restitution
         where session_id = $1
@@ -842,7 +842,7 @@ export async function chargerResultats(
 
   const restitutions: Restitution[] = lignesRestitutions.map((ligne) => ({
     id: ligne.id,
-    section: ligne.section,
+    niveau: ligne.niveau,
     besoin: ligne.besoin,
     membres: ligne.membres,
     outil: ligne.outil,

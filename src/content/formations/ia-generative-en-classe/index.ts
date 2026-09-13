@@ -9,10 +9,17 @@ import { notebookLm } from "./modules/05-notebooklm";
 import { bilanEtSuite } from "./modules/06-bilan";
 
 /**
- * Formation « IA générative au service de la maternelle » — Providence.
+ * Formation « IA générative au service de la classe » — Collège de la
+ * Providence.
  *
- * Source unique : le diaporama de vingt-et-une diapositives du même titre
- * (Eddy Bachaalany, 2026-2027), avec ses vingt-et-une pages de notes.
+ * Source : le diaporama de vingt-et-une diapositives « IA générative au
+ * service de la maternelle » (2026-2027) et ses vingt-et-une pages de notes.
+ *
+ * La méthode ACTIF, les définitions, la check-list et le workflow NotebookLM
+ * sont repris du diaporama sans changement. Ses exemples, tous pris en
+ * maternelle, sont conservés — le prompt sur le thème de la ferme en Moyenne
+ * Section reste l’exemple fil rouge — et complétés pour l’élémentaire, le
+ * collège et le lycée, la formation s’adressant à tout l’établissement.
  *
  * Le diaporama ne porte pas de minutage. Le programme ci-dessous le déduit du
  * contenu — un atelier de quatre minutes annoncé diapositive 13, une
@@ -21,22 +28,23 @@ import { bilanEtSuite } from "./modules/06-bilan";
  * directement sur une diapositive : à ajuster au besoin, ici et dans le
  * déroulé animateur.
  */
-export const iaGenerativeMaternelle: Formation = {
-  slug: "ia-generative-maternelle",
-  titre: "IA générative au service de la maternelle",
+export const iaGenerativeEnClasse: Formation = {
+  slug: "ia-generative-en-classe",
+  titre: "IA générative au service de la classe",
   sousTitre: "Créer de meilleurs prompts · Utiliser ChatGPT avec méthode",
   accroche:
     "Une séance très pratique : vous repartez avec la méthode ACTIF, un prompt écrit sur une de vos préparations réelles, et un premier carnet NotebookLM construit à partir de vos propres documents.",
-  etablissement: "Providence",
+  etablissement: "Collège de la Providence",
   public:
-    "Enseignantes et enseignants de maternelle — Petite, Moyenne et Grande Section. Aucun prérequis technique.",
+    "Enseignants de l’établissement, de la maternelle au secondaire, toutes disciplines. Aucun prérequis technique.",
   duree: "2 heures",
   session: "Année 2026-2027",
 
   formateur: {
-    nom: "Eddy Bachaalany",
+    nom: "Maria Bachaalany",
     role: "Référent numérique",
-    email: "eddy.bachaalany@lycee-montaigne.edu.lb",
+    /* Vide tant que l’adresse n’est pas arrêtée : elle n’est alors pas affichée. */
+    email: "",
   },
 
   /* Les trois objectifs de la diapositive 2, « Aujourd’hui, vous allez… ». */
@@ -62,13 +70,13 @@ export const iaGenerativeMaternelle: Formation = {
     "La méthode ACTIF : cinq réflexes à vérifier avant d’envoyer une demande",
     "Un prompt complet, écrit sur une de vos préparations de la semaine",
     "Un premier carnet NotebookLM construit sur un de vos documents",
-    "La fiche méthode et une bibliothèque de requêtes pour la maternelle",
+    "La fiche méthode et une bibliothèque de requêtes, classées par cycle",
   ],
 
   prerequis: [
     {
       titre: "Un ordinateur portable ou une tablette",
-      texte: "Chargé — un par participante, ou un pour deux en binôme.",
+      texte: "Chargé — un par participant, ou un pour deux en binôme.",
     },
     {
       titre: "Un accès à ChatGPT",
@@ -83,7 +91,7 @@ export const iaGenerativeMaternelle: Formation = {
     {
       titre: "Un document de travail en PDF",
       texte:
-        "Une fiche de séquence, une progression, un document de l’établissement — sans aucune donnée personnelle d’enfant.",
+        "Une fiche de séquence, une progression, un chapitre de cours, un document de l’établissement — sans aucune donnée personnelle d’élève.",
     },
   ],
 

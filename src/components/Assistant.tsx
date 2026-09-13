@@ -10,17 +10,21 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import { CONTACT_OUVERT, REFERENT } from "@/content/site";
+
 interface MessageAffiche {
   role: "user" | "assistant";
   content: string;
 }
 
-const COURRIEL_REFERENT = "eddy.bachaalany@lycee-montaigne.edu.lb";
+/** Vide tant que l’adresse de contact n’est pas arrêtée : on ne cite alors rien. */
+const COURRIEL_REFERENT = REFERENT.courriel;
 
-const MESSAGE_NON_CONFIGURE =
-  "L’assistant n’est pas configuré sur ce site. Pour une question sur la formation, écrivez au référent numérique : " +
-  COURRIEL_REFERENT +
-  ".";
+const MESSAGE_NON_CONFIGURE = CONTACT_OUVERT
+  ? "L’assistant n’est pas configuré sur ce site. Pour une question sur la formation, écrivez au référent numérique : " +
+    COURRIEL_REFERENT +
+    "."
+  : "L’assistant n’est pas configuré sur ce site. Pour une question sur la formation, adressez-vous au référent numérique de l’établissement.";
 
 const MESSAGE_GENERIQUE =
   "La réponse n’a pas pu être obtenue. Réessayez dans un instant.";
@@ -434,7 +438,7 @@ export default function Assistant() {
 
             <p className="mt-2 text-[0.6875rem] leading-snug text-estompe">
               L’assistant peut se tromper — vérifiez les informations
-              importantes. Ne saisissez aucune donnée personnelle d’enfant.
+              importantes. Ne saisissez aucune donnée personnelle d’élève.
             </p>
           </div>
         </div>

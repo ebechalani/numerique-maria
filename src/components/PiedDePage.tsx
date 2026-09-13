@@ -3,7 +3,13 @@
  * de la règle non négociable rappelée tout au long de la formation.
  * Composant serveur — aucun état, aucune interactivité.
  */
-import { ETABLISSEMENT, LOCALISATION, REFERENT, SIGNATURE } from "@/content/site";
+import {
+  CONTACT_OUVERT,
+  ETABLISSEMENT,
+  LOCALISATION,
+  REFERENT,
+  SIGNATURE,
+} from "@/content/site";
 
 export default function PiedDePage() {
   return (
@@ -33,13 +39,17 @@ export default function PiedDePage() {
           <p className="mt-2 text-sm leading-relaxed text-graphite">
             <span className="font-medium text-encre">{REFERENT.nom}</span>,{" "}
             {REFERENT.role}
-            <br />
-            <a
-              href={`mailto:${REFERENT.courriel}`}
-              className="break-words text-accent underline decoration-trait-fort underline-offset-2 transition-colors hover:text-accent-fort"
-            >
-              {REFERENT.courriel}
-            </a>
+            {CONTACT_OUVERT ? (
+              <>
+                <br />
+                <a
+                  href={`mailto:${REFERENT.courriel}`}
+                  className="break-words text-accent underline decoration-trait-fort underline-offset-2 transition-colors hover:text-accent-fort"
+                >
+                  {REFERENT.courriel}
+                </a>
+              </>
+            ) : null}
           </p>
         </section>
 
@@ -48,7 +58,7 @@ export default function PiedDePage() {
             La règle non négociable
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-graphite">
-            Aucune donnée personnelle d’enfant dans un outil d’IA, quel que soit
+            Aucune donnée personnelle d’élève dans un outil d’IA, quel que soit
             le compte. L’IA propose ; l’enseignant décide.
           </p>
         </section>

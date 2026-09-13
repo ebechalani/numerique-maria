@@ -2,7 +2,7 @@
  * Méthode ACTIF — cinq réflexes avant d’envoyer un prompt.
  *
  * Textes repris du diaporama « IA générative au service de la maternelle »
- * (formation enseignants, Eddy Bachaalany, 2026-2027), diapositives 4 à 14 :
+ * (formation enseignants, 2026-2027), diapositives 4 à 14 :
  * définitions, questions à se poser, exemples, check-list finale et
  * relances proposées dans les notes de l’animateur.
  */

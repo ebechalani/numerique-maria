@@ -135,15 +135,19 @@ export default async function PageFormation({ params }: Props) {
 
         <p className="mt-3 text-sm text-graphite">
           Animée par {formation.formateur.nom}, {formation.formateur.role}
-          <span aria-hidden="true" className="mx-1.5 text-trait-fort">
-            ·
-          </span>
-          <a
-            href={`mailto:${formation.formateur.email}`}
-            className="break-words text-accent underline decoration-trait-fort underline-offset-2 transition-colors hover:text-accent-fort"
-          >
-            {formation.formateur.email}
-          </a>
+          {formation.formateur.email ? (
+            <>
+              <span aria-hidden="true" className="mx-1.5 text-trait-fort">
+                ·
+              </span>
+              <a
+                href={`mailto:${formation.formateur.email}`}
+                className="break-words text-accent underline decoration-trait-fort underline-offset-2 transition-colors hover:text-accent-fort"
+              >
+                {formation.formateur.email}
+              </a>
+            </>
+          ) : null}
         </p>
 
         {lienPremierModule ? (

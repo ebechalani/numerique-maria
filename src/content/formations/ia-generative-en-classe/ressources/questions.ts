@@ -1,8 +1,8 @@
 import type { QuestionFrequente } from "@/content/types";
 
 /**
- * Questions fréquentes — formation « IA générative au service de la
- * maternelle » (méthode ACTIF, Eddy Bachaalany, Providence, 2026-2027).
+ * Questions fréquentes — formation « IA générative au service de la classe »
+ * (méthode ACTIF, Collège de la Providence, 2026-2027).
  *
  * Douze questions posées en séance, avec des réponses qui ne disent rien de
  * plus que le diaporama. Source : diapositives 5 et 11 et leurs notes (la
@@ -42,7 +42,7 @@ export const questionsFrequentes: QuestionFrequente[] = [
   },
   {
     question:
-      "« Puis-je écrire le nom d’un enfant dans ma demande, pour que la réponse soit plus adaptée ? »",
+      "« Puis-je écrire le nom d’un élève dans ma demande, pour que la réponse soit plus adaptée ? »",
     reponse:
       "Non : protéger fait partie des trois réflexes professionnels, et il s’agit d’éviter d’envoyer des données sensibles ou identifiantes sur les élèves. Vous n’avez d’ailleurs pas besoin du nom pour obtenir une réponse utile : le contexte se donne par le niveau, le thème et l’objectif — « Je prépare une séquence de Moyenne Section sur le thème de la ferme ». Décrivez la situation, pas l’enfant. L’adaptation à tel ou tel enfant de votre classe, c’est vous qui la faites, au moment d’utiliser le support.",
   },
@@ -68,9 +68,9 @@ export const questionsFrequentes: QuestionFrequente[] = [
       "Non. Une citation facilite la vérification, mais ne remplace pas votre lecture du document source. C’est la quatrième étape du workflow, après importer, questionner et transformer : vous ouvrez les citations et vous relisez avant usage. NotebookLM aide à retrouver la source ; l’enseignant relit toujours le passage important.",
   },
   {
-    question: "« Puis-je utiliser l’IA pour évaluer un enfant ? »",
+    question: "« Puis-je utiliser l’IA pour évaluer un élève ? »",
     reponse:
-      "L’enseignant garde la décision pédagogique : l’IA accélère la préparation, elle ne remplace pas votre jugement. Juger des acquis d’un enfant de Petite, Moyenne ou Grande Section relève de votre observation en classe, et ce jugement-là ne se délègue pas. S’ajoute la règle de protection : les données sensibles ou identifiantes sur les élèves n’ont pas à être envoyées à un outil. Ce que l’IA peut faire, c’est vous aider à préparer les supports en amont — des questions de compréhension, une consigne reformulée en langage plus simple, un tableau de mots — que vous utiliserez ensuite avec votre classe.",
+      "L’enseignant garde la décision pédagogique : l’IA accélère la préparation, elle ne remplace pas votre jugement. Juger des acquis d’un élève relève de votre observation en classe, et ce jugement-là ne se délègue pas. S’ajoute la règle de protection : les données sensibles ou identifiantes sur les élèves n’ont pas à être envoyées à un outil. Ce que l’IA peut faire, c’est vous aider à préparer les supports en amont — des questions de compréhension, une consigne reformulée en langage plus simple, un tableau de mots — que vous utiliserez ensuite avec votre classe.",
   },
   {
     question: "« Par où commencer dès demain ? »",

@@ -6,7 +6,7 @@
  * Seul formulaire du site où une identité peut apparaître, et seulement celle
  * des adultes, saisie volontairement : le champ « membres du groupe ». Les
  * prénoms suffisent, l’aide du champ le dit. Rien n’invite à saisir une donnée
- * d’enfant, et le rappel figure sous le bouton d’envoi.
+ * d’élève, et le rappel figure sous le bouton d’envoi.
  *
  * Un même groupe peut déposer plusieurs contributions au cours de la séance :
  * après un envoi réussi, le formulaire se rouvre à vide — en conservant les
@@ -589,7 +589,7 @@ export default function FormulaireRestitution({
 
         <p className="text-xs leading-relaxed text-graphite">
           Cette contribution est lue et projetée en salle. N’y saisissez aucune
-          donnée personnelle d’enfant — nom, classe, note, situation — ni aucun
+          donnée personnelle d’élève — nom, classe, note, situation — ni aucun
           extrait de copie. Les prénoms des membres du groupe suffisent.
         </p>
       </div>

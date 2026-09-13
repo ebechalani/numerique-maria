@@ -86,7 +86,7 @@ export default function PageRedacteur() {
       <footer className="mt-12 border-t border-trait pt-5 text-sm text-graphite">
         <p>
           La méthode ACTIF est présentée par {REFERENT.nom}, {REFERENT.role},
-          dans la formation « IA générative au service de la maternelle ».{" "}
+          dans la formation « IA générative au service de la classe ».{" "}
           {CITATIONS_ACTIF.reflexes}
         </p>
       </footer>

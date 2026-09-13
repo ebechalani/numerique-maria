@@ -3,7 +3,7 @@ import type { Module } from "@/content/types";
 /**
  * Module 4 — Comprendre ChatGPT (1:10, 15 min).
  * Source : diapositives 15 et 16 du diaporama « IA générative au service de la
- * maternelle » (Eddy Bachaalany, 2026-2027) et leurs notes de l’animateur :
+ * maternelle » (2026-2027) et leurs notes de l’animateur :
  * les trois temps de la production d’une réponse, la recherche web signalée
  * par OpenAI, et les trois réflexes professionnels — vérifier, protéger,
  * itérer. La référence OpenAI figure dans la note de la diapositive 21.
@@ -106,7 +106,7 @@ export const comprendreChatGpt: Module = {
     {
       type: "paragraphe",
       texte:
-        "Ces trois réflexes sont non négociables. Le plus important reste le dernier mot : l’enseignant est responsable du contenu final et de son adaptation à sa classe — au niveau réel des enfants, à la durée de l’atelier, au vocabulaire déjà travaillé.",
+        "Ces trois réflexes sont non négociables, et ils valent à tous les niveaux. Le plus important reste le dernier mot : l’enseignant est responsable du contenu final et de son adaptation à sa classe — au niveau réel des élèves, à la durée de la séance, au vocabulaire déjà travaillé.",
     },
 
     { type: "titre", texte: "Six situations de classe" },
@@ -121,11 +121,11 @@ export const comprendreChatGpt: Module = {
             "Vous demandez à ChatGPT des idées de comptines sur l’automne pour le rituel du matin en Petite Section.",
           verdict: "autorise",
           pourquoi:
-            "Préparation pédagogique, sans aucune donnée d’enfant. Il reste à relire les textes proposés avant de les chanter en classe : réflexe « Vérifier ».",
+            "Préparation pédagogique, sans aucune donnée d’élève. Il reste à relire les textes proposés avant de les chanter en classe : réflexe « Vérifier ».",
         },
         {
           situation:
-            "Vous lui faites reformuler la consigne d’un atelier de motricité en phrases plus simples, pour des enfants de 3 ans.",
+            "Vous lui faites reformuler la consigne d’un exercice en phrases plus simples, pour les élèves de votre classe qui lisent difficilement le français.",
           verdict: "autorise",
           pourquoi:
             "Reformuler est une tâche typique — et c’est le réflexe « Itérer » : demander une version plus courte, plus simple, plus adaptée. La consigne retenue reste celle que vous validez.",
@@ -135,11 +135,11 @@ export const comprendreChatGpt: Module = {
             "Vous collez le compte rendu nominatif d’un entretien avec une famille pour qu’il le résume.",
           verdict: "interdit",
           pourquoi:
-            "Réflexe « Protéger » : éviter d’envoyer des données sensibles ou identifiantes sur les élèves. Un compte rendu d’entretien nomme l’enfant et sa famille. Si vous voulez de l’aide pour la rédaction, décrivez la situation sans le moindre élément identifiant.",
+            "Réflexe « Protéger » : éviter d’envoyer des données sensibles ou identifiantes sur les élèves. Un compte rendu d’entretien nomme l’élève et sa famille. Si vous voulez de l’aide pour la rédaction, décrivez la situation sans le moindre élément identifiant.",
         },
         {
           situation:
-            "ChatGPT vous donne le titre et l’auteur d’un album sur la ferme ; vous recopiez la référence dans votre fiche de séquence et la commandez telle quelle.",
+            "ChatGPT vous donne le titre et l’auteur d’un ouvrage — un album, un roman, un manuel — ; vous recopiez la référence dans votre fiche de séquence et la commandez telle quelle.",
           verdict: "interdit",
           pourquoi:
             "Réflexe « Vérifier » : relire les faits, les consignes et les références avant utilisation en classe. La réponse peut être inexacte, et une référence est précisément ce qui se vérifie en une minute.",

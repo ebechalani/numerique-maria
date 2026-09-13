@@ -2,7 +2,7 @@ import type { SectionFiche } from "@/content/types";
 
 /**
  * Fiche mémo ACTIF remise en séance — formation « IA générative au service de
- * la maternelle » (Eddy Bachaalany, Providence, 2026-2027).
+ * la classe » (Collège de la Providence, 2026-2027).
  *
  * Six sections qui condensent tout le diaporama et se consultent seules, sans
  * la séance. Source : diapositives 3 et 4 (définition du prompt et exemples de
@@ -116,7 +116,7 @@ export const ficheActif: SectionFiche[] = [
       {
         type: "paragraphe",
         texte:
-          "Contexte de l’exemple : une Moyenne Section, thème de la ferme. Chaque ligne du tableau est une phrase du prompt, et une seule lettre de la méthode.",
+          "Contexte de l’exemple : une Moyenne Section, thème de la ferme — c’est l’exemple du support. Chaque ligne du tableau est une phrase du prompt, et une seule lettre de la méthode. Transposez-le à votre niveau en changeant les cinq phrases, jamais la grille.",
       },
       {
         type: "tableau",

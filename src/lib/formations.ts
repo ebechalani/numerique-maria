@@ -19,14 +19,14 @@ import type {
   SectionFiche,
 } from "@/content/types";
 
-import { iaGenerativeMaternelle } from "@/content/formations/ia-generative-maternelle";
-import { ficheActif } from "@/content/formations/ia-generative-maternelle/ressources/fiche-actif";
-import { questionsFrequentes } from "@/content/formations/ia-generative-maternelle/ressources/questions";
+import { iaGenerativeEnClasse } from "@/content/formations/ia-generative-en-classe";
+import { ficheActif } from "@/content/formations/ia-generative-en-classe/ressources/fiche-actif";
+import { questionsFrequentes } from "@/content/formations/ia-generative-en-classe/ressources/questions";
 import {
   bibliothequeRequetes,
   briquesRequete,
-} from "@/content/formations/ia-generative-maternelle/ressources/requetes";
-import { deroule } from "@/content/formations/ia-generative-maternelle/ressources/deroule";
+} from "@/content/formations/ia-generative-en-classe/ressources/requetes";
+import { deroule } from "@/content/formations/ia-generative-en-classe/ressources/deroule";
 
 /* Réexports : certaines pages ont besoin des données brutes, pas des blocs. */
 export { briquesRequete, questionsFrequentes };
@@ -36,7 +36,7 @@ export { briquesRequete, questionsFrequentes };
 /* ------------------------------------------------------------------ */
 
 /** Toutes les formations publiées, dans l’ordre d’affichage du catalogue. */
-export const formations: Formation[] = [iaGenerativeMaternelle];
+export const formations: Formation[] = [iaGenerativeEnClasse];
 
 export function getFormation(slug: string): Formation | undefined {
   return formations.find((formation) => formation.slug === slug);
@@ -132,7 +132,7 @@ function blocsRequetes(): Bloc[] {
     {
       type: "bibliothequeRequetes",
       consigne:
-        "Remplacer les crochets. Ne jamais coller de données personnelles : utiliser « enfant A », « enfant B ».",
+        "Remplacer les crochets. Ne jamais coller de données personnelles : utiliser « élève A », « élève B ».",
       lignes: bibliothequeRequetes,
     },
   ];

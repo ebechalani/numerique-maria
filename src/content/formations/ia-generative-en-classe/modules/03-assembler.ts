@@ -3,7 +3,7 @@ import type { Module } from "@/content/types";
 /**
  * Module 3 — Assembler un prompt ACTIF (0:45, 20 min).
  * Source : diapositives 11, 12, 13 et 14 du diaporama « IA générative au
- * service de la maternelle » (Eddy Bachaalany, 2026-2027) et leurs notes de
+ * service de la maternelle » (2026-2027) et leurs notes de
  * l’animateur : l’exemple complet Moyenne Section sur le thème de la ferme,
  * la comparaison entre un prompt vague et un prompt ACTIF, l’atelier de
  * quatre minutes et la check-list de validation en cinq questions.
@@ -53,7 +53,7 @@ export const assemblerUnPrompt: Module = {
     {
       type: "paragraphe",
       texte:
-        "Mises bout à bout, ces cinq phrases forment un paragraphe qui tient en quelques lignes. Rien d’inhabituel : c’est ce que vous diriez à une collègue remplaçante qui préparerait l’atelier à votre place.",
+        "Mises bout à bout, ces cinq phrases forment un paragraphe qui tient en quelques lignes. Rien d’inhabituel : c’est ce que vous diriez à un collègue remplaçant qui préparerait la séance à votre place.",
     },
     {
       type: "requete",
@@ -62,6 +62,19 @@ export const assemblerUnPrompt: Module = {
         "Tu es un assistant pédagogique spécialisé en maternelle. Je prépare une séquence de Moyenne Section sur le thème de la ferme. Propose 12 mots concrets. Pour chaque mot, écris une phrase-modèle de 5 mots maximum et une devinette en 3 indices. Utilise un ton simple, bienveillant et adapté à des enfants de 4–5 ans. Présente le résultat dans un tableau : Mot | Phrase-modèle | Devinette.",
       commentaire:
         "Le résultat devient plus prévisible, plus cohérent et surtout plus facile à utiliser en classe.",
+    },
+    {
+      type: "paragraphe",
+      texte:
+        "L’exemple est pris en maternelle parce que c’est celui du support, mais la grille ne change pas d’un cycle à l’autre : seules les cinq phrases changent. Voici le même prompt, écrit pour une classe de 5e.",
+    },
+    {
+      type: "requete",
+      titre: "Le même prompt, transposé au collège",
+      texte:
+        "Tu es un professeur d’histoire-géographie au collège. Je prépare une séance de 5e sur les grandes découvertes, pour une classe où plusieurs élèves lisent difficilement le français. Propose 12 mots clés du chapitre. Pour chaque mot, écris une définition de 15 mots maximum et une question qui oblige à l’employer. Utilise un vocabulaire précis mais des phrases courtes. Présente le résultat dans un tableau : Mot | Définition | Question.",
+      commentaire:
+        "Mêmes cinq briques, même ordre, même longueur : c’est le contenu des phrases qui change, pas la méthode.",
     },
     {
       type: "encadre",

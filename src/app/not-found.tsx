@@ -12,7 +12,7 @@ import { formations } from "@/lib/formations";
 export const metadata: Metadata = {
   title: "Page introuvable",
   description:
-    "Cette adresse ne correspond à aucune page de la plateforme de formation de Providence.",
+    "Cette adresse ne correspond à aucune page de la plateforme de formation du Collège de la Providence.",
 };
 
 export default function PageIntrouvable() {

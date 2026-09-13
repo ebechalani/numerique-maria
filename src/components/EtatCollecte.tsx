@@ -40,7 +40,7 @@ import { connection } from "next/server";
 import { collecteConfiguree, sessionActive } from "@/lib/db";
 
 interface Proprietes {
-  /** Slug de la formation, ex. « ia-generative-maternelle ». */
+  /** Slug de la formation, ex. « ia-generative-en-classe ». */
   formation: string;
 }
 

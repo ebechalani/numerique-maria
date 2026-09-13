@@ -47,7 +47,7 @@ import {
   champsRestitution,
   enqueteSatisfaction,
   sondageEntree,
-} from "@/content/formations/ia-generative-maternelle/ressources/questionnaires";
+} from "@/content/formations/ia-generative-en-classe/ressources/questionnaires";
 import type { Question } from "@/content/types";
 import type { Agregat, Restitution, SessionFormation } from "@/lib/db";
 
@@ -87,7 +87,7 @@ export interface LienFormulaire {
 }
 
 interface Proprietes {
-  /** Slug de la formation, ex. « ia-generative-maternelle ». */
+  /** Slug de la formation, ex. « ia-generative-en-classe ». */
   formation: string;
   titreFormation: string;
   /** Session au sens du catalogue : « Année 2026-2027 ». */
@@ -211,7 +211,7 @@ function versRestitutions(brut: unknown): Restitution[] {
     return [
       {
         id: ligne.id,
-        section: texte(ligne.section),
+        niveau: texte(ligne.niveau),
         besoin: texteOuNull(ligne.besoin),
         membres: texteOuNull(ligne.membres),
         outil: texte(ligne.outil),
@@ -650,9 +650,9 @@ type Onglet = (typeof ONGLETS)[number]["id"];
 /* Restitutions : texte d’archivage                                    */
 /* ------------------------------------------------------------------ */
 
-/** Champs de la trame, hors section qui sert déjà de titre de groupe. */
+/** Champs de la trame, hors niveau qui sert déjà de titre de groupe. */
 const CHAMPS_AFFICHES = champsRestitution.filter(
-  (champ) => champ.id !== "section",
+  (champ) => champ.id !== "niveau",
 );
 
 /**
@@ -683,13 +683,13 @@ function texteDesRestitutions(
     `${restitutions.length} contribution${restitutions.length > 1 ? "s" : ""}`,
   );
 
-  let sectionPrecedente: string | null = null;
+  let niveauPrecedent: string | null = null;
 
   for (const restitution of restitutions) {
-    const section = restitution.section.trim() || "Section non précisée";
-    if (section !== sectionPrecedente) {
-      lignes.push("", `── ${section.toUpperCase()} ──`);
-      sectionPrecedente = section;
+    const niveau = restitution.niveau.trim() || "Niveau non précisé";
+    if (niveau !== niveauPrecedent) {
+      lignes.push("", `── ${niveau.toUpperCase()} ──`);
+      niveauPrecedent = niveau;
     }
 
     lignes.push("");
@@ -1031,10 +1031,10 @@ export default function TableauDeBordAnimateur({
       "bord reste vide. Renseignez la variable et redéployez : les tables " +
       "sont créées automatiquement.";
 
-  const restitutionsParSection = useMemo(() => {
+  const restitutionsParNiveau = useMemo(() => {
     const groupes = new Map<string, Restitution[]>();
     for (const restitution of restitutions) {
-      const cle = restitution.section.trim() || "Section non précisée";
+      const cle = restitution.niveau.trim() || "Niveau non précisé";
       const liste = groupes.get(cle);
       if (liste) liste.push(restitution);
       else groupes.set(cle, [restitution]);
@@ -1704,7 +1704,7 @@ export default function TableauDeBordAnimateur({
                 {restitutions.length} contribution
                 {restitutions.length > 1 ? "s" : ""} déposée
                 {restitutions.length > 1 ? "s" : ""}, groupée
-                {restitutions.length > 1 ? "s" : ""} par section.
+                {restitutions.length > 1 ? "s" : ""} par niveau.
               </p>
 
               {projection ? null : (
@@ -1713,15 +1713,15 @@ export default function TableauDeBordAnimateur({
             </div>
 
             <div className={projection ? "mt-6 space-y-10" : "mt-6 space-y-8"}>
-              {restitutionsParSection.map(([section, groupe]) => (
-                <section key={section}>
+              {restitutionsParNiveau.map(([niveau, groupe]) => (
+                <section key={niveau}>
                   <h3
                     className={[
                       "border-b border-trait pb-2 font-serif leading-snug break-words text-encre",
                       projection ? "text-3xl" : "text-xl",
                     ].join(" ")}
                   >
-                    {section}
+                    {niveau}
                     <span
                       className={[
                         "ml-3 font-sans text-estompe",

@@ -699,7 +699,7 @@ export default function RedacteurActif() {
               ))}
             </ul>
             <p className="mt-3 text-xs leading-relaxed text-estompe">
-              Jamais de donnée d’enfant dans un prompt : ni nom, ni observation, ni
+              Jamais de donnée d’élève dans un prompt : ni nom, ni note, ni observation, ni
               situation.
             </p>
           </div>

@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useId, useRef } from "react";
 
 import BoutonCopier from "@/components/ui/BoutonCopier";
-import { briquesRequete } from "@/content/formations/ia-generative-maternelle/ressources/requetes";
+import { briquesRequete } from "@/content/formations/ia-generative-en-classe/ressources/requetes";
 import { useEtatLocal } from "@/lib/progression";
 
 /** Clé de persistance — un enseignant retrouve sa requête en revenant. */
@@ -117,7 +117,7 @@ function ChampBrique({
 
 /**
  * Les cinq lettres de la méthode ACTIF — Acteur, Contexte, Tâche, Intention,
- * Format — assemblées en direct sous les yeux de la participante.
+ * Format — assemblées en direct sous les yeux du participant.
  * La structure vaut pour les deux outils de la formation, ChatGPT et
  * NotebookLM.
  */
@@ -220,8 +220,8 @@ export default function ConstructeurRequete() {
             <path d="M12 16h.01" />
           </svg>
           <span>
-            Ne jamais saisir de données personnelles d’enfants : utiliser
-            « enfant A », « enfant B ».
+            Ne jamais saisir de données personnelles d’élèves : utiliser
+            « élève A », « élève B ».
           </span>
         </p>
       </section>

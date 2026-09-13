@@ -3,7 +3,7 @@ import type { Module } from "@/content/types";
 /**
  * Module 6 — Bilan et suite (1:50, 10 min).
  * Source : diapositive 21 du diaporama « IA générative au service de la
- * maternelle » (Eddy Bachaalany, 2026-2027) et sa note de l’animateur :
+ * maternelle » (2026-2027) et sa note de l’animateur :
  * les trois idées à garder, l’action très concrète à mener dès cette
  * semaine, et les deux références citées en fin de note.
  */
@@ -101,7 +101,7 @@ export const bilanEtSuite: Module = {
     {
       type: "paragraphe",
       texte:
-        "Prenez deux minutes pour l’enquête de satisfaction, à la page /formations/ia-generative-maternelle/participer/satisfaction : elle est anonyme et sert à ajuster la prochaine session. Les ressources du site restent ouvertes ensuite — la fiche méthode ACTIF, qui reprend la définition, les cinq lettres, un prompt complet ligne à ligne et la check-list ; la bibliothèque de requêtes, à copier et à adapter à votre section ; et les questions fréquentes, où figurent les réponses aux questions posées en séance.",
+        "Prenez deux minutes pour l’enquête de satisfaction, à la page /formations/ia-generative-en-classe/participer/satisfaction : elle est anonyme et sert à ajuster la prochaine session. Les ressources du site restent ouvertes ensuite — la fiche méthode ACTIF, qui reprend la définition, les cinq lettres, un prompt complet ligne à ligne et la check-list ; la bibliothèque de requêtes, à copier et à adapter à votre section ; et les questions fréquentes, où figurent les réponses aux questions posées en séance.",
     },
 
     { type: "titre", texte: "Références" },

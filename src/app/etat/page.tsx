@@ -192,7 +192,7 @@ export default async function PageEtat() {
 
       <p className="mt-6 text-sm text-graphite">
         <Link
-          href="/formations/ia-generative-maternelle/animateur"
+          href="/formations/ia-generative-en-classe/animateur"
           className="text-accent underline underline-offset-4 hover:text-accent-fort"
         >
           Aller à la page animateur

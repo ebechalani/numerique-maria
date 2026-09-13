@@ -152,7 +152,7 @@ export default async function PageRessource({ params }: Props) {
                   </p>
                   <p className="mt-1.5 text-sm leading-relaxed text-encre-clair">
                     Elle réunit l’intention, la préparation, le minutage, les
-                    notes des diapositives et les variantes. Les participantes
+                    notes des diapositives et les variantes. Les participants
                     n’en ont pas besoin pour suivre la formation : les modules
                     et la fiche méthode suffisent.
                   </p>

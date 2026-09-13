@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { ETABLISSEMENT, LOCALISATION, REFERENT, SIGNATURE } from "@/content/site";
+import {
+  CONTACT_OUVERT,
+  ETABLISSEMENT,
+  INITIALES,
+  LOCALISATION,
+  REFERENT,
+  SIGNATURE,
+} from "@/content/site";
 import { formations } from "@/lib/formations";
 
 export const metadata: Metadata = {
@@ -92,19 +99,23 @@ export default function Accueil() {
             aria-hidden="true"
             className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-encre font-serif text-sm text-papier"
           >
-            EB
+            {INITIALES}
           </span>
           <span>
             Animé par{" "}
             <span className="font-medium text-encre">{REFERENT.nom}</span>,{" "}
             {REFERENT.role}
-            <Point />{" "}
-            <a
-              href={`mailto:${REFERENT.courriel}`}
-              className="text-accent underline decoration-trait-fort underline-offset-2 transition-colors hover:text-accent-fort"
-            >
-              {REFERENT.courriel}
-            </a>
+            {CONTACT_OUVERT ? (
+              <>
+                <Point />{" "}
+                <a
+                  href={`mailto:${REFERENT.courriel}`}
+                  className="text-accent underline decoration-trait-fort underline-offset-2 transition-colors hover:text-accent-fort"
+                >
+                  {REFERENT.courriel}
+                </a>
+              </>
+            ) : null}
           </span>
         </p>
       </header>

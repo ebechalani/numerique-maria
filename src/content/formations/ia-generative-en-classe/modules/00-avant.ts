@@ -4,7 +4,7 @@ import type { Module } from "@/content/types";
  * Module 0 — Avant de commencer : cadre de la séance et sondage d’entrée
  * (0:00, 10 min).
  * Source : diapositives 1 et 2 du diaporama « IA générative au service de la
- * maternelle » (Eddy Bachaalany, 2026-2027) et leurs notes de l’animateur.
+ * maternelle » (2026-2027) et leurs notes de l’animateur.
  */
 export const avantDeCommencer: Module = {
   slug: "avant-de-commencer",
@@ -25,14 +25,14 @@ export const avantDeCommencer: Module = {
     {
       type: "paragraphe",
       texte:
-        "Le fil de la séance tient en trois temps : créer de meilleurs prompts avec la méthode ACTIF, utiliser ChatGPT avec méthode, puis exploiter NotebookLM à partir de vos propres ressources. Deux outils, pas davantage — et des exemples pris dans vos classes : le langage oral, le vocabulaire d’un thème comme la ferme, la reformulation d’une consigne.",
+        "Le fil de la séance tient en trois temps : créer de meilleurs prompts avec la méthode ACTIF, utiliser ChatGPT avec méthode, puis exploiter NotebookLM à partir de vos propres ressources. Deux outils, pas davantage — et des exemples pris dans vos classes, de la maternelle au secondaire : le vocabulaire d’un thème, la reformulation d’une consigne, une série d’exercices, le résumé d’un chapitre, une grille d’évaluation.",
     },
     {
       type: "encadre",
       ton: "info",
       titre: "Ce que la séance ne vise pas",
       texte:
-        "Ni cours technique sur le fonctionnement des modèles, ni catalogue d’outils. Ce que nous cherchons, c’est à réduire les réponses trop générales et à obtenir des contenus plus proches du besoin réel de la classe.",
+        "Ni cours technique sur le fonctionnement des modèles, ni catalogue d’outils. Ce que nous cherchons, c’est à réduire les réponses trop générales et à obtenir des contenus plus proches du besoin réel de la classe — la vôtre, quel que soit le niveau où vous enseignez.",
     },
 
     { type: "titre", texte: "Aujourd’hui, vous allez…" },
@@ -69,7 +69,7 @@ export const avantDeCommencer: Module = {
     {
       type: "paragraphe",
       texte:
-        "Le sondage se remplit sur ce site pendant l’installation, à la page « Sondage d’entrée » : /formations/ia-generative-maternelle/participer/sondage. Scannez le QR code projeté, ou saisissez l’adresse — aucune application à installer. Trois questions et une question ouverte, pas davantage.",
+        "Le sondage se remplit sur ce site pendant l’installation, à la page « Sondage d’entrée » : /formations/ia-generative-en-classe/participer/sondage. Scannez le QR code projeté, ou saisissez l’adresse — aucune application à installer. Trois questions et une question ouverte, pas davantage.",
     },
     {
       type: "paragraphe",
@@ -94,12 +94,12 @@ export const avantDeCommencer: Module = {
         {
           titre: "Un ordinateur ou une tablette",
           texte:
-            "Un appareil par participante, ou un pour deux : les ateliers se font en manipulant, pas en regardant.",
+            "Un appareil par participant, ou un pour deux : les ateliers se font en manipulant, pas en regardant.",
         },
         {
           titre: "Un accès à ChatGPT",
           texte:
-            "Testez la connexion avant la séance. Si vous n’avez pas de compte, mettez-vous en binôme avec une collègue : la démonstration se fait aussi au vidéoprojecteur.",
+            "Testez la connexion avant la séance. Si vous n’avez pas de compte, mettez-vous en binôme avec un collègue : la démonstration se fait aussi au vidéoprojecteur.",
         },
         {
           titre: "Un compte Google actif",
@@ -109,7 +109,7 @@ export const avantDeCommencer: Module = {
         {
           titre: "Un document de travail au format PDF",
           texte:
-            "Une fiche de séquence, une progression ou un règlement — un document que vous utilisez vraiment. Sans aucune donnée d’enfant : ni nom, ni photo, ni observation individuelle.",
+            "Une fiche de séquence, une progression, un chapitre de cours ou un règlement — un document que vous utilisez vraiment. Sans aucune donnée d’élève : ni nom, ni photo, ni observation individuelle.",
         },
       ],
     },
@@ -117,7 +117,7 @@ export const avantDeCommencer: Module = {
     {
       type: "notesAnimateur",
       texte:
-        "0:00 — 10 min. Accueil. Annoncer d’emblée le cadre : l’objectif n’est pas de devenir expert en intelligence artificielle, mais d’apprendre à mieux formuler ses demandes, puis de voir deux usages concrets pour gagner du temps en préparation pédagogique. Pendant l’installation, projeter le QR code du sondage affiché par le tableau de bord animateur (/formations/ia-generative-maternelle/animateur) et écrire aussi l’adresse au tableau, pour celles qui n’ont pas de téléphone à portée ; garder le tableau de bord ouvert dans un onglet et projeter les résultats dès que le groupe a répondu, pour les commenter en deux ou trois phrases. Présenter ensuite les trois objectifs : mieux formuler, mieux dialoguer, mieux exploiter vos sources. Insister sur le fait que la méthode sert à réduire les réponses trop générales et à obtenir des contenus plus proches du besoin réel de la classe. Terminer sur le fil rouge : une IA utile commence par une intention pédagogique claire.",
+        "0:00 — 10 min. Accueil. Annoncer d’emblée le cadre : l’objectif n’est pas de devenir expert en intelligence artificielle, mais d’apprendre à mieux formuler ses demandes, puis de voir deux usages concrets pour gagner du temps en préparation pédagogique. Pendant l’installation, projeter le QR code du sondage affiché par le tableau de bord animateur (/formations/ia-generative-en-classe/animateur) et écrire aussi l’adresse au tableau, pour ceux qui n’ont pas de téléphone à portée ; garder le tableau de bord ouvert dans un onglet et projeter les résultats dès que le groupe a répondu, pour les commenter en deux ou trois phrases. Présenter ensuite les trois objectifs : mieux formuler, mieux dialoguer, mieux exploiter vos sources. Insister sur le fait que la méthode sert à réduire les réponses trop générales et à obtenir des contenus plus proches du besoin réel de la classe. Terminer sur le fil rouge : une IA utile commence par une intention pédagogique claire.",
     },
   ],
 };

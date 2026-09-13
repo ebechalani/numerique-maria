@@ -22,7 +22,7 @@ import FormulaireQuestionnaire from "@/components/formulaires/FormulaireQuestion
 import {
   enqueteSatisfaction,
   sondageEntree,
-} from "@/content/formations/ia-generative-maternelle/ressources/questionnaires";
+} from "@/content/formations/ia-generative-en-classe/ressources/questionnaires";
 import type { Formation, Questionnaire } from "@/content/types";
 import { formations, getFormation } from "@/lib/formations";
 

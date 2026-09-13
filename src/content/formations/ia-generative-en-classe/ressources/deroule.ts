@@ -1,15 +1,15 @@
 import type { SectionDeroule } from "@/content/types";
 
 /**
- * Déroulé animateur — « IA générative au service de la maternelle ».
+ * Déroulé animateur — « IA générative au service de la classe ».
  *
  * Reconstitué à partir des vingt-et-une pages de notes du diaporama du même
- * titre (Eddy Bachaalany, 2026-2027), diapositives 1 à 21 : intention de la
+ * titre (2026-2027), diapositives 1 à 21 : intention de la
  * séance (diapositives 1 et 2), préparation de la démonstration NotebookLM
  * (diapositive 20), minutage déduit du contenu, et la note de chacune des
  * vingt-et-une diapositives reprise telle qu’elle figure au support.
  *
- * Réservé à l’animation : cette ressource n’est pas destinée aux participantes.
+ * Réservé à l’animation : cette ressource n’est pas destinée aux participants.
  */
 export const deroule: SectionDeroule[] = [
   {
@@ -46,12 +46,12 @@ export const deroule: SectionDeroule[] = [
       {
         type: "paragraphe",
         texte:
-          "Le public est celui de la maternelle — Petite, Moyenne et Grande Section, des enfants de 3 à 5 ans. Tous les exemples restent dans ce monde : langage oral, comptines, ateliers, motricité, rituels, coins jeux. Deux outils seulement sont manipulés, ChatGPT et NotebookLM.",
+          "Le public réunit tout l’établissement, de la maternelle au secondaire, toutes disciplines. Le diaporama d’origine étant écrit pour la maternelle, ses exemples y restent — le vocabulaire d’un thème, la reformulation d’une consigne — et servent de fil rouge ; donnez systématiquement leur équivalent dans un autre cycle, pour que chacun se reconnaisse : une série d’exercices en élémentaire, un résumé de chapitre au collège, une grille d’évaluation au lycée. Deux outils seulement sont manipulés, ChatGPT et NotebookLM.",
       },
       {
         type: "paragraphe",
         texte:
-          "La posture est celle d’une démonstration partagée, pas d’un cours magistral : on pose la question avant de donner la définition (diapositive 3), on fait proposer des exemples aux participantes à chaque lettre de ACTIF (diapositives 6 à 10), et on corrige uniquement ce qui manque dans un prompt, sans le réécrire à la place de son autrice (diapositive 13).",
+          "La posture est celle d’une démonstration partagée, pas d’un cours magistral : on pose la question avant de donner la définition (diapositive 3), on fait proposer des exemples aux participants à chaque lettre de ACTIF (diapositives 6 à 10), et on corrige uniquement ce qui manque dans un prompt, sans le réécrire à la place de son auteur (diapositive 13). Quand le groupe mélange les cycles, faites lire deux prompts issus de deux niveaux différents : la méthode se montre mieux ainsi qu’en l’expliquant.",
       },
       {
         type: "encadre",
@@ -76,7 +76,7 @@ export const deroule: SectionDeroule[] = [
         type: "checklist",
         id: "deroule-preparation",
         consigne:
-          "À vérifier avant l’arrivée des participantes. Les quatre points tiennent en une dizaine de minutes si le document de démonstration est déjà choisi.",
+          "À vérifier avant l’arrivée des participants. Les quatre points tiennent en une dizaine de minutes si le document de démonstration est déjà choisi.",
         items: [
           {
             titre: "La salle et la projection",
@@ -96,7 +96,7 @@ export const deroule: SectionDeroule[] = [
           {
             titre: "Le tableau de bord animateur ouvert",
             texte:
-              "À la page /formations/ia-generative-maternelle/animateur, dans un troisième onglet. Il affiche les trois QR codes de la séance : le sondage d’entrée à projeter pendant l’installation — dont les résultats se commentent ensuite —, la trame de restitution à ouvrir à la fin de l’atelier de la diapositive 13, et l’enquête de satisfaction avant de quitter la salle.",
+              "À la page /formations/ia-generative-en-classe/animateur, dans un troisième onglet. Il affiche les trois QR codes de la séance : le sondage d’entrée à projeter pendant l’installation — dont les résultats se commentent ensuite —, la trame de restitution à ouvrir à la fin de l’atelier de la diapositive 13, et l’enquête de satisfaction avant de quitter la salle.",
           },
         ],
       },
@@ -183,23 +183,23 @@ export const deroule: SectionDeroule[] = [
           ],
           [
             "6 — A, Acteur / Identité",
-            "Expliquez le A de ACTIF : Acteur / Identité. Définir le rôle ou l’expertise que l’IA doit adopter pour cadrer sa réponse. Lisez un ou deux exemples puis demandez aux participantes d’en proposer un adapté à leur prochaine séquence.",
+            "Expliquez le A de ACTIF : Acteur / Identité. Définir le rôle ou l’expertise que l’IA doit adopter pour cadrer sa réponse. Lisez un ou deux exemples puis demandez aux participants d’en proposer un adapté à leur prochaine séquence.",
           ],
           [
             "7 — C, Contexte",
-            "Expliquez le C de ACTIF : Contexte. Donner les informations qui expliquent la situation, le niveau, le thème et l’objectif. Lisez un ou deux exemples puis demandez aux participantes d’en proposer un adapté à leur prochaine séquence.",
+            "Expliquez le C de ACTIF : Contexte. Donner les informations qui expliquent la situation, le niveau, le thème et l’objectif. Lisez un ou deux exemples puis demandez aux participants d’en proposer un adapté à leur prochaine séquence.",
           ],
           [
             "8 — T, Tâche / Action",
-            "Expliquez le T de ACTIF : Tâche / Action. Dire précisément ce que vous attendez : produire, expliquer, reformuler, comparer, corriger… Lisez un ou deux exemples puis demandez aux participantes d’en proposer un adapté à leur prochaine séquence.",
+            "Expliquez le T de ACTIF : Tâche / Action. Dire précisément ce que vous attendez : produire, expliquer, reformuler, comparer, corriger… Lisez un ou deux exemples puis demandez aux participants d’en proposer un adapté à leur prochaine séquence.",
           ],
           [
             "9 — I, Intention / Tonalité",
-            "Expliquez le I de ACTIF : Intention / Tonalité. Préciser le niveau de langage, le ton et l’intention : simple, rassurant, dynamique, professionnel… Lisez un ou deux exemples puis demandez aux participantes d’en proposer un adapté à leur prochaine séquence.",
+            "Expliquez le I de ACTIF : Intention / Tonalité. Préciser le niveau de langage, le ton et l’intention : simple, rassurant, dynamique, professionnel… Lisez un ou deux exemples puis demandez aux participants d’en proposer un adapté à leur prochaine séquence.",
           ],
           [
             "10 — F, Format",
-            "Expliquez le F de ACTIF : Format. Indiquer la forme attendue afin que la réponse soit directement exploitable. Lisez un ou deux exemples puis demandez aux participantes d’en proposer un adapté à leur prochaine séquence.",
+            "Expliquez le F de ACTIF : Format. Indiquer la forme attendue afin que la réponse soit directement exploitable. Lisez un ou deux exemples puis demandez aux participants d’en proposer un adapté à leur prochaine séquence.",
           ],
           [
             "11 — Assembler ACTIF : un prompt complet",
@@ -282,12 +282,12 @@ export const deroule: SectionDeroule[] = [
           {
             titre: "Si le groupe est déjà à l’aise",
             texte:
-              "Passez plus vite sur les diapositives 3 et 4 — la définition d’un prompt est déjà acquise, un échange de 30 secondes et la définition lue suffisent — et allongez d’autant la séquence NotebookLM. Le temps gagné sert à importer un deuxième document, à comparer deux transformations d’une même source, ou à laisser les participantes poser leurs propres questions au notebook de démonstration.",
+              "Passez plus vite sur les diapositives 3 et 4 — la définition d’un prompt est déjà acquise, un échange de 30 secondes et la définition lue suffisent — et allongez d’autant la séquence NotebookLM. Le temps gagné sert à importer un deuxième document, à comparer deux transformations d’une même source, ou à laisser les participants poser leurs propres questions au notebook de démonstration.",
           },
           {
             titre: "Si personne n’a de compte ChatGPT",
             texte:
-              "Faites la démonstration au vidéoprojecteur, depuis votre propre compte, et mettez les participantes en binôme pour l’atelier : l’une écrit le prompt, l’autre vérifie les cinq lettres de la check-list. L’écriture d’un prompt ACTIF ne demande pas de compte ; seul l’envoi du prompt en demande un, et il peut attendre.",
+              "Faites la démonstration au vidéoprojecteur, depuis votre propre compte, et mettez les participants en binôme pour l’atelier : l’une écrit le prompt, l’autre vérifie les cinq lettres de la check-list. L’écriture d’un prompt ACTIF ne demande pas de compte ; seul l’envoi du prompt en demande un, et il peut attendre.",
           },
         ],
       },

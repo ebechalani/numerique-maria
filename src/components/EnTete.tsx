@@ -3,9 +3,14 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { ETABLISSEMENT, REFERENT, SIGNATURE } from "@/content/site";
+import {
+  CONTACT_OUVERT,
+  ETABLISSEMENT,
+  REFERENT,
+  SIGNATURE,
+} from "@/content/site";
 
-/** Adresse de contact du référent numérique. */
+/** Adresse de contact du référent numérique — vide tant qu’elle n’est pas arrêtée. */
 const COURRIEL = REFERENT.courriel;
 
 /** Identifiant du panneau mobile, référencé par aria-controls. */
@@ -63,13 +68,15 @@ export default function EnTete() {
           >
             Rédacteur de prompt
           </Link>
-          <a
-            href={`mailto:${COURRIEL}`}
-            className="text-graphite transition-colors hover:text-accent"
-            title={`Écrire à ${REFERENT.nom}`}
-          >
-            Contact
-          </a>
+          {CONTACT_OUVERT ? (
+            <a
+              href={`mailto:${COURRIEL}`}
+              className="text-graphite transition-colors hover:text-accent"
+              title={`Écrire à ${REFERENT.nom}`}
+            >
+              Contact
+            </a>
+          ) : null}
         </nav>
 
         {/* Bouton du panneau mobile */}
@@ -129,20 +136,25 @@ export default function EnTete() {
           </Link>
           <Link
             href="/outils/redacteur-de-prompt"
-            className="border-b border-trait py-3 text-encre transition-colors hover:text-accent"
+            className={[
+              "py-3 text-encre transition-colors hover:text-accent",
+              CONTACT_OUVERT ? "border-b border-trait" : "",
+            ].join(" ")}
           >
             Rédacteur de prompt{" "}
             <span className="block text-xs text-estompe">Méthode ACTIF</span>
           </Link>
-          <a
-            href={`mailto:${COURRIEL}`}
-            className="py-3 text-encre transition-colors hover:text-accent"
-          >
-            Contact{" "}
-            <span className="block text-xs text-estompe">
-              {REFERENT.nom} · {COURRIEL}
-            </span>
-          </a>
+          {CONTACT_OUVERT ? (
+            <a
+              href={`mailto:${COURRIEL}`}
+              className="py-3 text-encre transition-colors hover:text-accent"
+            >
+              Contact{" "}
+              <span className="block text-xs text-estompe">
+                {REFERENT.nom} · {COURRIEL}
+              </span>
+            </a>
+          ) : null}
         </nav>
       </div>
     </header>

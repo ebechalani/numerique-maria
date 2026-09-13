@@ -260,7 +260,9 @@ function formationEnTexte(formation: Formation): string {
       `- Public : ${formation.public}`,
       `- Durée : ${formation.duree}`,
       `- Session : ${formation.session}`,
-      `- Formateur : ${formation.formateur.nom}, ${formation.formateur.role} (${formation.formateur.email})`,
+      `- Formateur : ${formation.formateur.nom}, ${formation.formateur.role}${
+        formation.formateur.email ? ` (${formation.formateur.email})` : ""
+      }`,
     ].join("\n"),
   ]);
 

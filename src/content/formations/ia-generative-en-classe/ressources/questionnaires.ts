@@ -4,19 +4,19 @@ import type { Questionnaire, ChampRestitution } from "@/content/types";
  * Les deux questionnaires de la séance et la trame de restitution de l’atelier.
  *
  * Source : le diaporama « IA générative au service de la maternelle »
- * (Eddy Bachaalany, 2026-2027) — diapositive 2 pour les trois objectifs repris
+ * (2026-2027) — diapositive 2 pour les trois objectifs repris
  * dans l’enquête de satisfaction, diapositives 13 et 14 pour l’atelier « À vous
  * de jouer ! » dont la trame de restitution recueille le résultat, diapositive 16
  * pour la vigilance sur les données.
  *
  * Le sondage d’entrée est rempli pendant l’installation et ses résultats sont
  * projetés en direct : ils servent à caler la séance sur les usages réels des
- * enseignantes de maternelle plutôt que sur des généralités.
+ * enseignants de l’établissement plutôt que sur des généralités.
  *
  * Les deux questionnaires sont anonymes : ni nom, ni adresse, ni identifiant.
  * La seule identité du site est le champ « membres du groupe » de la trame de
  * restitution — celle d’adultes, saisie volontairement, jamais affichée sur le
- * mur des contributions. La trame rappelle en plus qu’aucune donnée d’enfant ne
+ * mur des contributions. La trame rappelle en plus qu’aucune donnée d’élève ne
  * doit y figurer — c’est le réflexe « Protéger » de la diapositive 16.
  */
 
@@ -46,10 +46,11 @@ export const sondageEntree: Questionnaire = {
       type: "choix-multiple",
       libelle: "Pour quoi faire ?",
       options: [
-        "Préparer des activités",
+        "Préparer des séances ou des activités",
         "Trouver des idées de séquences",
-        "Rédiger des documents pour les familles",
+        "Créer des exercices ou une évaluation",
         "Adapter ou simplifier une consigne",
+        "Rédiger des documents pour les familles",
         "Usage personnel",
         "Je n’en utilise pas",
       ],
@@ -138,7 +139,7 @@ export const enqueteSatisfaction: Questionnaire = {
  * rédigé, ce que l’IA en a fait, et ce qu’il a fallu corriger.
  *
  * Les identifiants sont ceux que la collecte attend, sans exception :
- * « section », « besoin », « membres », « outil », « ressource », « requete »,
+ * « niveau », « besoin », « membres », « outil », « ressource », « requete »,
  * « corrections » et « vigilance ». Ce sont les colonnes de la table des
  * restitutions, les clés que la route de dépôt accepte et l’ordre d’affichage
  * du mur des contributions comme du tableau de bord animateur.
@@ -153,15 +154,16 @@ export const enqueteSatisfaction: Questionnaire = {
  */
 export const champsRestitution: ChampRestitution[] = [
   {
-    id: "section",
+    id: "niveau",
     libelle: "Niveau de la classe",
     aide: "Il sert de titre à votre contribution sur le mur des collègues.",
     type: "choix",
     options: [
-      "Petite Section",
-      "Moyenne Section",
-      "Grande Section",
-      "Classe multi-niveaux",
+      "Maternelle",
+      "Élémentaire",
+      "Collège",
+      "Lycée",
+      "Plusieurs niveaux",
     ],
     obligatoire: true,
   },
@@ -174,7 +176,7 @@ export const champsRestitution: ChampRestitution[] = [
   {
     id: "besoin",
     libelle: "Le besoin de la semaine",
-    aide: "La préparation réelle que vous avez choisie : un atelier de langage, un rituel, une comptine, une séance de motricité…",
+    aide: "La préparation réelle que vous avez choisie : un atelier de langage, une série d’exercices, un résumé de chapitre, une grille d’évaluation…",
     type: "texte",
     obligatoire: true,
   },
@@ -188,7 +190,7 @@ export const champsRestitution: ChampRestitution[] = [
   {
     id: "requete",
     libelle: "Votre prompt assemblé",
-    aide: "Collez-le tel quel, avec ses cinq éléments ACTIF : rôle, contexte, tâche, ton, format. C’est lui qui sert aux collègues. Aucune donnée d’enfant ne doit y figurer — ni prénom, ni observation nominative.",
+    aide: "Collez-le tel quel, avec ses cinq éléments ACTIF : rôle, contexte, tâche, ton, format. C’est lui qui sert aux collègues. Aucune donnée d’élève ne doit y figurer — ni prénom, ni observation nominative.",
     type: "texte-long",
     obligatoire: true,
   },

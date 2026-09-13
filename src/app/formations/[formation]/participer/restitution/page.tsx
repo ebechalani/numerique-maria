@@ -9,7 +9,7 @@
  * La page porte ce que le formulaire ne peut pas porter : la consigne de
  * l’atelier — sa minuterie et sa composition de groupe — et ce qu’on attend
  * d’une contribution. Le formulaire, lui, garde ses libellés de champs, ses
- * aides et le rappel « aucune donnée d’enfant » sous le bouton d’envoi ; la page
+ * aides et le rappel « aucune donnée d’élève » sous le bouton d’envoi ; la page
  * ne les répète pas.
  */
 
@@ -19,7 +19,7 @@ import { notFound } from "next/navigation";
 
 import EtatCollecte from "@/components/EtatCollecte";
 import FormulaireRestitution from "@/components/formulaires/FormulaireRestitution";
-import { champsRestitution } from "@/content/formations/ia-generative-maternelle/ressources/questionnaires";
+import { champsRestitution } from "@/content/formations/ia-generative-en-classe/ressources/questionnaires";
 import { formations, getFormation } from "@/lib/formations";
 
 interface Props {
@@ -118,7 +118,7 @@ export default async function PageRestitution({ params }: Props) {
         </h1>
 
         <p className="mt-3 max-w-[70ch] leading-relaxed text-graphite">
-          Une trame par participante ou par binôme, déposée à la fin de
+          Une trame par participant ou par binôme, déposée à la fin de
           l’atelier. Les dépôts alimentent la mise en commun et la liste
           collective des vigilances.
         </p>
@@ -136,8 +136,7 @@ export default async function PageRestitution({ params }: Props) {
           Comment se déroule l’atelier
         </h2>
         <p className="mt-1.5 text-sm leading-relaxed text-graphite">
-          Seule ou en binôme, de préférence avec une collègue de la même
-          section. Quinze minutes en tout.
+          Seul ou en binôme, de préférence avec un collègue du même cycle. Quinze minutes en tout.
         </p>
 
         <ol className="mt-5 space-y-4">
@@ -185,7 +184,7 @@ export default async function PageRestitution({ params }: Props) {
         <EtatCollecte formation={formation.slug} />
       </div>
 
-      {/* Le formulaire porte ses aides et le rappel « aucune donnée d’enfant » */}
+      {/* Le formulaire porte ses aides et le rappel « aucune donnée d’élève » */}
       <div className="mt-8 border-t border-trait pt-8">
         <FormulaireRestitution
           champs={champsRestitution}

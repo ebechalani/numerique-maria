@@ -4,7 +4,7 @@
  * Projeté pendant la restitution éclair, et consultable par les enseignants
  * après la séance : chacune y lit ce que les autres ont produit.
  *
- * Anonymisation. La page affiche la section, le besoin, l’outil, le prompt,
+ * Anonymisation. La page affiche le niveau, le besoin, l’outil, le prompt,
  * la réponse obtenue, les corrections et la vigilance — jamais le champ
  * «&nbsp;membres du groupe&nbsp;», qui reste réservé au tableau de bord de
  * l’animateur. Le tri est celui de la base (ordre de dépôt) ; aucune heure
@@ -133,7 +133,7 @@ function CarteContribution({ restitution }: { restitution: Restitution }) {
     <article className="rounded-[--radius-carte] border border-trait bg-craie p-5 sm:p-6">
       <header className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 border-b border-trait pb-3">
         <h2 className="min-w-0 font-serif text-lg font-semibold text-encre">
-          {restitution.section}
+          {restitution.niveau}
         </h2>
         <span className="shrink-0 rounded-full border border-trait bg-voile px-2.5 py-0.5 text-xs font-medium text-graphite">
           {restitution.outil}

@@ -24,7 +24,7 @@ interface EntreeRessource {
 interface Props {
   formationSlug: string;
   formationTitre: string;
-  /** « Eddy Bachaalany, référent numérique » — affiché sous le titre. */
+  /** « Maria Bachaalany, référent numérique » — affiché sous le titre. */
   formateur?: string;
   modules: EntreeModule[];
   ressources: EntreeRessource[];

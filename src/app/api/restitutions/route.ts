@@ -20,7 +20,7 @@
  * plutôt qu’une erreur technique.
  */
 
-import { champsRestitution } from "@/content/formations/ia-generative-maternelle/ressources/questionnaires";
+import { champsRestitution } from "@/content/formations/ia-generative-en-classe/ressources/questionnaires";
 import type { ChampRestitution } from "@/content/types";
 import {
   collecteConfiguree,

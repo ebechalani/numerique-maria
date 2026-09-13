@@ -3,7 +3,7 @@ import type { Module } from "@/content/types";
 /**
  * Module 2 — La méthode ACTIF : cinq réflexes avant d’envoyer (0:20, 25 min).
  * Source : diapositives 5 à 10 du diaporama « IA générative au service de la
- * maternelle » (Eddy Bachaalany, 2026-2027) et leurs notes de l’animateur.
+ * maternelle » (2026-2027) et leurs notes de l’animateur.
  * Le QCM reprend en outre trois morceaux du prompt complet de la diapositive 11.
  * Les définitions, les questions à se poser et les exemples sont repris mot
  * pour mot de `@/content/outils/actif` — c’est la même transcription.
@@ -73,7 +73,7 @@ export const methodeActif: Module = {
     {
       type: "paragraphe",
       texte:
-        "Quel rôle doit jouer l’IA ? Il s’agit de définir le rôle ou l’expertise que l’IA doit adopter pour cadrer sa réponse. Une même demande n’obtient pas le même texte selon que l’outil se place en assistant pédagogique de maternelle, en spécialiste du langage oral ou en collègue qui relit une consigne : le rôle oriente le vocabulaire, le niveau de détail et ce qui est jugé important.",
+        "Quel rôle doit jouer l’IA ? Il s’agit de définir le rôle ou l’expertise que l’IA doit adopter pour cadrer sa réponse. Une même demande n’obtient pas le même texte selon que l’outil se place en assistant pédagogique de maternelle, en professeur des écoles, en professeur de sa discipline au collège ou en collègue qui relit une consigne : le rôle oriente le vocabulaire, le niveau de détail et ce qui est jugé important.",
     },
     {
       type: "liste",
@@ -96,7 +96,7 @@ export const methodeActif: Module = {
     {
       type: "paragraphe",
       texte:
-        "Dans quelle situation ? Il s’agit de donner les informations qui expliquent la situation, le niveau, le thème et l’objectif. En maternelle, la section change tout : ce qui convient à une Grande Section est hors de portée en Petite Section. Le thème de la période, la durée dont vous disposez et le moment de la journée — un rituel du matin, un atelier, un temps de regroupement — appartiennent eux aussi au contexte.",
+        "Dans quelle situation ? Il s’agit de donner les informations qui expliquent la situation, le niveau, le thème et l’objectif. Le niveau change tout : ce qui convient à une Grande Section est hors de portée en Petite Section, et ce qui passe en 3e ne passe pas en 6e. Le thème de la période, la durée dont vous disposez et le moment — un rituel du matin, un atelier, une heure de cours, une évaluation — appartiennent eux aussi au contexte.",
     },
     {
       type: "liste",
@@ -130,7 +130,7 @@ export const methodeActif: Module = {
     {
       type: "paragraphe",
       texte:
-        "Quel style de réponse ? Il s’agit de préciser le niveau de langage, le ton et l’intention : simple, rassurant, dynamique, professionnel… Sans cette indication, l’outil écrit volontiers pour un adulte. Or une consigne destinée à des enfants de 4–5 ans se dit avec des phrases courtes et des mots connus, et il faut le demander explicitement.",
+        "Quel style de réponse ? Il s’agit de préciser le niveau de langage, le ton et l’intention : simple, rassurant, dynamique, professionnel… Sans cette indication, l’outil écrit volontiers pour un adulte. Or une consigne destinée à des enfants de 4–5 ans se dit avec des phrases courtes et des mots connus ; une consigne de lycée demande, elle, un vocabulaire précis. Dans les deux cas, il faut le demander explicitement.",
     },
     {
       type: "liste",
@@ -246,7 +246,7 @@ export const methodeActif: Module = {
     {
       type: "notesAnimateur",
       texte:
-        "0:20 — 25 min. Diapositive 5 : présenter ACTIF comme une checklist mentale, pas comme une formule rigide ; un prompt peut rester court, à condition que les informations essentielles soient présentes. Rappeler la phrase du support : ACTIF ne rallonge pas forcément le prompt, il enlève surtout les zones floues. Puis une diapositive par lettre, environ trois minutes chacune, toujours selon le même geste : expliquer la lettre, dire ce que ça signifie, lire un ou deux exemples puis demander aux participantes d’en proposer un adapté à leur prochaine séquence. Diapositive 6, A — Acteur / Identité : définir le rôle ou l’expertise que l’IA doit adopter pour cadrer sa réponse. Diapositive 7, C — Contexte : donner les informations qui expliquent la situation, le niveau, le thème et l’objectif. Diapositive 8, T — Tâche / Action : dire précisément ce que l’on attend — produire, expliquer, reformuler, comparer, corriger. Diapositive 9, I — Intention / Tonalité : préciser le niveau de langage, le ton et l’intention — simple, rassurant, dynamique, professionnel. Diapositive 10, F — Format : indiquer la forme attendue afin que la réponse soit directement exploitable. Ne pas commenter les propositions des participantes au-delà de la lettre travaillée : elles seront reprises et assemblées au module suivant. Terminer par le QCM, en le faisant à main levée si le groupe préfère, puis revenir sur l’écart le plus fréquent entre le T et le F.",
+        "0:20 — 25 min. Diapositive 5 : présenter ACTIF comme une checklist mentale, pas comme une formule rigide ; un prompt peut rester court, à condition que les informations essentielles soient présentes. Rappeler la phrase du support : ACTIF ne rallonge pas forcément le prompt, il enlève surtout les zones floues. Puis une diapositive par lettre, environ trois minutes chacune, toujours selon le même geste : expliquer la lettre, dire ce que ça signifie, lire un ou deux exemples puis demander aux participants d’en proposer un adapté à leur prochaine séquence. Diapositive 6, A — Acteur / Identité : définir le rôle ou l’expertise que l’IA doit adopter pour cadrer sa réponse. Diapositive 7, C — Contexte : donner les informations qui expliquent la situation, le niveau, le thème et l’objectif. Diapositive 8, T — Tâche / Action : dire précisément ce que l’on attend — produire, expliquer, reformuler, comparer, corriger. Diapositive 9, I — Intention / Tonalité : préciser le niveau de langage, le ton et l’intention — simple, rassurant, dynamique, professionnel. Diapositive 10, F — Format : indiquer la forme attendue afin que la réponse soit directement exploitable. Ne pas commenter les propositions des participants au-delà de la lettre travaillée : elles seront reprises et assemblées au module suivant. Terminer par le QCM, en le faisant à main levée si le groupe préfère, puis revenir sur l’écart le plus fréquent entre le T et le F.",
     },
   ],
 };

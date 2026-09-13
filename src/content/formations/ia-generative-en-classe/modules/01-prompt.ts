@@ -3,7 +3,7 @@ import type { Module } from "@/content/types";
 /**
  * Module 1 — Qu’est-ce qu’un prompt ? (0:10, 10 min).
  * Source : diapositives 3 et 4 du diaporama « IA générative au service de la
- * maternelle » (Eddy Bachaalany, 2026-2027) et leurs notes de l’animateur :
+ * maternelle » (2026-2027) et leurs notes de l’animateur :
  * échauffement en binôme, exemples de demandes, définition « À retenir » et
  * annonce des cinq lettres de la méthode ACTIF.
  */
@@ -34,7 +34,7 @@ export const quEstCeQuUnPrompt: Module = {
     {
       type: "paragraphe",
       texte:
-        "Trente secondes, en binôme avec votre voisine ou votre voisin. Puis partagez une réponse avec le groupe. Il n’y a pas de bonne formulation attendue : l’intérêt est d’entendre les mots que chacune emploie spontanément — consigne, demande, question, instruction — avant de fixer une définition commune.",
+        "Trente secondes, en binôme avec votre voisin ou votre voisine. Puis partagez une réponse avec le groupe. Il n’y a pas de bonne formulation attendue : l’intérêt est d’entendre les mots que chacune emploie spontanément — consigne, demande, question, instruction — avant de fixer une définition commune.",
     },
 
     { type: "titre", texte: "Des demandes que vous formulez déjà" },
