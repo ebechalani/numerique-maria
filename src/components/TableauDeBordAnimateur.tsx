@@ -5,8 +5,8 @@
  *
  * La salle répond sur le site, les résultats s’affichent ici, et
  * l’animateur commente en direct. Quatre onglets suivent le déroulé — la
- * séance, le sondage d’entrée (projeté à 0:05), la satisfaction (à la clôture),
- * les restitutions des groupes.
+ * séance, le sondage d’entrée (projeté en début de séance), la satisfaction
+ * (à la clôture), les restitutions des groupes.
  *
  * Cinq partis pris.
  *
@@ -28,7 +28,7 @@
  *     les onglets, et confie la navigation aux flèches du clavier, la
  *     télécommande de vidéoprojecteur en envoyant justement.
  *
- *  5. Aucune couleur du feu tricolore de la charte n’apparaît ici. Une séance
+ *  5. Aucune couleur de verdict (vert, ambre, rouge) n’apparaît ici. Une séance
  *     ouverte, une connexion perdue, un envoi réussi : tout s’exprime en accent
  *     ou en gris. Vert, ambre et rouge restent réservés aux verdicts
  *     autorisé / encadré / interdit.
@@ -211,8 +211,8 @@ function versRestitutions(brut: unknown): Restitution[] {
     return [
       {
         id: ligne.id,
-        domaine: texte(ligne.domaine),
-        niveau: texteOuNull(ligne.niveau),
+        section: texte(ligne.section),
+        besoin: texteOuNull(ligne.besoin),
         membres: texteOuNull(ligne.membres),
         outil: texte(ligne.outil),
         ressource: texte(ligne.ressource),
@@ -650,9 +650,9 @@ type Onglet = (typeof ONGLETS)[number]["id"];
 /* Restitutions : texte d’archivage                                    */
 /* ------------------------------------------------------------------ */
 
-/** Champs de la trame, hors domaine qui sert déjà de titre de groupe. */
+/** Champs de la trame, hors section qui sert déjà de titre de groupe. */
 const CHAMPS_AFFICHES = champsRestitution.filter(
-  (champ) => champ.id !== "domaine",
+  (champ) => champ.id !== "section",
 );
 
 /**
@@ -683,13 +683,13 @@ function texteDesRestitutions(
     `${restitutions.length} contribution${restitutions.length > 1 ? "s" : ""}`,
   );
 
-  let domainePrecedent: string | null = null;
+  let sectionPrecedente: string | null = null;
 
   for (const restitution of restitutions) {
-    const domaine = restitution.domaine.trim() || "Domaine non précisé";
-    if (domaine !== domainePrecedent) {
-      lignes.push("", `── ${domaine.toUpperCase()} ──`);
-      domainePrecedent = domaine;
+    const section = restitution.section.trim() || "Section non précisée";
+    if (section !== sectionPrecedente) {
+      lignes.push("", `── ${section.toUpperCase()} ──`);
+      sectionPrecedente = section;
     }
 
     lignes.push("");
@@ -1031,10 +1031,10 @@ export default function TableauDeBordAnimateur({
       "bord reste vide. Renseignez la variable et redéployez : les tables " +
       "sont créées automatiquement.";
 
-  const restitutionsParDomaine = useMemo(() => {
+  const restitutionsParSection = useMemo(() => {
     const groupes = new Map<string, Restitution[]>();
     for (const restitution of restitutions) {
-      const cle = restitution.domaine.trim() || "Domaine non précisé";
+      const cle = restitution.section.trim() || "Section non précisée";
       const liste = groupes.get(cle);
       if (liste) liste.push(restitution);
       else groupes.set(cle, [restitution]);
@@ -1704,7 +1704,7 @@ export default function TableauDeBordAnimateur({
                 {restitutions.length} contribution
                 {restitutions.length > 1 ? "s" : ""} déposée
                 {restitutions.length > 1 ? "s" : ""}, groupée
-                {restitutions.length > 1 ? "s" : ""} par domaine.
+                {restitutions.length > 1 ? "s" : ""} par section.
               </p>
 
               {projection ? null : (
@@ -1713,15 +1713,15 @@ export default function TableauDeBordAnimateur({
             </div>
 
             <div className={projection ? "mt-6 space-y-10" : "mt-6 space-y-8"}>
-              {restitutionsParDomaine.map(([domaine, groupe]) => (
-                <section key={domaine}>
+              {restitutionsParSection.map(([section, groupe]) => (
+                <section key={section}>
                   <h3
                     className={[
                       "border-b border-trait pb-2 font-serif leading-snug break-words text-encre",
                       projection ? "text-3xl" : "text-xl",
                     ].join(" ")}
                   >
-                    {domaine}
+                    {section}
                     <span
                       className={[
                         "ml-3 font-sans text-estompe",

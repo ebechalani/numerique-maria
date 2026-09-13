@@ -31,7 +31,7 @@ export const comprendreChatGpt: Module = {
         {
           titre: "Vous formulez",
           texte:
-            "Un prompt + votre contexte. C’est exactement ce que la méthode ACTIF sert à préparer : le rôle, la situation, la tâche, le ton et la forme attendue.",
+            "Un prompt + votre contexte. C’est exactement ce que la méthode ACTIF sert à préparer : l’acteur, le contexte, la tâche, l’intention et le format.",
         },
         {
           titre: "Le modèle génère",
@@ -114,7 +114,7 @@ export const comprendreChatGpt: Module = {
       type: "casPratiques",
       id: "cas-reflexes",
       consigne:
-        "Pour chaque situation : quel réflexe s’applique, et que faites-vous ? Répondez avant d’afficher le corrigé.",
+        "Pour chaque situation, dites si l’usage est autorisé, encadré ou interdit, et repérez le réflexe qui s’applique. Répondez avant d’afficher le corrigé.",
       cas: [
         {
           situation:
@@ -153,7 +153,7 @@ export const comprendreChatGpt: Module = {
         },
         {
           situation:
-            "La première réponse propose une activité d’une heure pour une Moyenne Section ; vous l’imprimez pour demain sans y revenir.",
+            "La première réponse propose une activité d’une heure pour une Moyenne Section, alors que l’atelier que vous préparez est bien plus court.",
           verdict: "encadre",
           pourquoi:
             "La réponse peut être utile, mais aussi trop générale ou inadaptée. Réflexe « Itérer » : demandez une version plus courte et adaptée à la Moyenne Section, puis tranchez vous-même — la décision pédagogique vous revient.",

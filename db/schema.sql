@@ -46,14 +46,13 @@ create table if not exists formation_reponse (
 -- ce qu'il a dû corriger et ce qui appelle une vigilance. C'est la seule table
 -- où figure un texte saisi volontairement par les participantes (colonne
 -- « membres ») ; elle reste facultative.
--- La colonne « domaine » est l'axe de regroupement du mur des contributions :
--- le domaine d'apprentissage travaillé.
+-- La colonne « section » est l'axe de regroupement du mur des contributions.
 create table if not exists formation_restitution (
   id serial primary key,
   session_id integer not null references formation_session(id) on delete cascade,
   formation text not null,
-  domaine text not null,
-  niveau text,
+  section text not null,
+  besoin text,
   membres text,
   outil text not null,
   ressource text not null,
@@ -113,5 +112,5 @@ comment on column formation_reponse.reponses is
   'Identifiant de question -> valeur (texte, liste de textes, ou nombre).';
 comment on column formation_restitution.membres is
   'Prénoms des membres du groupe, saisis volontairement. Jamais de donnée d''enfant.';
-comment on column formation_restitution.domaine is
-  'Domaine d''apprentissage travaillé — axe de regroupement des contributions.';
+comment on column formation_restitution.section is
+  'Section de la classe — axe de regroupement des contributions.';

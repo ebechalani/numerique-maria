@@ -25,9 +25,9 @@
  * L’appel à la base est enveloppé : une base tombée dégrade le bandeau, jamais
  * la page.
  *
- * Aucune couleur du feu tricolore ici. « Collecte non configurée », « base
+ * Aucune couleur de verdict ici. « Collecte non configurée », « base
  * injoignable », « collecte fermée » sont des états de la collecte, pas des
- * verdicts de la charte : vert, ambre et rouge restent réservés à autorisé /
+ * verdicts du contenu : vert, ambre et rouge restent réservés à autorisé /
  * encadré / interdit. Le bandeau s’exprime donc en encre et en voile, comme les
  * messages d’erreur des formulaires, et la session ouverte en accent.
  *

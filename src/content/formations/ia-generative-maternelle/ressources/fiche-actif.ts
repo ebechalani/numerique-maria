@@ -206,7 +206,7 @@ export const ficheActif: SectionFiche[] = [
       {
         type: "paragraphe",
         texte:
-          "Itérer est l’un des trois réflexes professionnels : demander une version plus courte, plus simple, plus adaptée ou mieux structurée. La première réponse est une base de travail, pas un résultat définitif. Une relance tient en une phrase, et elle conserve tout le contexte déjà donné.",
+          "Itérer est l’un des trois réflexes professionnels : demander une version plus courte, plus simple, plus adaptée ou mieux structurée. La première réponse est une base de travail, pas un résultat définitif. Une relance tient en une phrase.",
       },
       {
         type: "liste",
@@ -291,9 +291,9 @@ export const ficheActif: SectionFiche[] = [
       {
         type: "encadre",
         ton: "attention",
-        titre: "Jamais de donnée personnelle d’enfant",
+        titre: "Protéger, aussi au moment d’importer",
         texte:
-          "Ne déposez jamais de donnée personnelle d’enfant dans un outil d’IA — nom, photo, observation nominative, information de santé ou de famille — quel que soit le compte utilisé, dans ChatGPT comme dans NotebookLM. Les documents importés sont des supports de travail, jamais des documents nominatifs.",
+          "Le réflexe « Protéger » vaut pour les deux outils de la formation : évitez d’envoyer des données sensibles ou identifiantes sur les élèves, dans ChatGPT comme dans NotebookLM. Un document importé est un support de travail : préférez un document non nominatif, comme le règlement intérieur de la démonstration.",
       },
     ],
   },

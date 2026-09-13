@@ -4,6 +4,7 @@ import type { Module } from "@/content/types";
  * Module 2 — La méthode ACTIF : cinq réflexes avant d’envoyer (0:20, 25 min).
  * Source : diapositives 5 à 10 du diaporama « IA générative au service de la
  * maternelle » (Eddy Bachaalany, 2026-2027) et leurs notes de l’animateur.
+ * Le QCM reprend en outre trois morceaux du prompt complet de la diapositive 11.
  * Les définitions, les questions à se poser et les exemples sont repris mot
  * pour mot de `@/content/outils/actif` — c’est la même transcription.
  */
@@ -15,7 +16,7 @@ export const methodeActif: Module = {
   duree: 25,
   horaire: "0:20",
   objectif:
-    "Vous saurez nommer les cinq éléments d’ACTIF — acteur, contexte, tâche, intention, format —, dire ce que chacun apporte à la réponse, et reconnaître lequel manque dans un prompt que vous relisez.",
+    "Vous saurez nommer les cinq éléments d’ACTIF — acteur, contexte, tâche, intention, format —, dire ce que chacun apporte à la réponse, et reconnaître à quelle lettre correspond chaque morceau d’un prompt que vous relisez.",
   blocs: [
     {
       type: "paragraphe",
@@ -161,7 +162,7 @@ export const methodeActif: Module = {
       type: "qcm",
       id: "qcm-actif",
       consigne:
-        "Cinq morceaux de prompt, pris dans une préparation de Moyenne Section sur le thème de la ferme. Pour chacun, dites à quelle lettre d’ACTIF il correspond.",
+        "Cinq morceaux de prompt, repris des exemples du support. Pour chacun, dites à quelle lettre d’ACTIF il correspond.",
       questions: [
         {
           question: "« Tu es un expert en langage oral pour les 4–5 ans. »",
@@ -239,7 +240,7 @@ export const methodeActif: Module = {
       ton: "astuce",
       titre: "Une check-list, pas une formule",
       texte:
-        "Présentez ACTIF comme une check-list mentale, pas comme une formule rigide. Un prompt peut rester court, à condition que les informations essentielles soient présentes : l’objectif n’est pas d’écrire cinq phrases, mais de ne laisser aucun des cinq points dans le flou.",
+        "Voyez ACTIF comme une check-list mentale, pas comme une formule rigide. Votre prompt peut rester court, à condition que les informations essentielles soient présentes : l’objectif n’est pas d’écrire cinq phrases, mais de ne laisser aucun des cinq points dans le flou.",
     },
 
     {

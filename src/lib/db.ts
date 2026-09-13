@@ -73,8 +73,8 @@ export interface Agregat {
 
 export interface Restitution {
   id: number;
-  domaine: string;
-  niveau: string | null;
+  section: string;
+  besoin: string | null;
   membres: string | null;
   outil: string;
   ressource: string;
@@ -386,8 +386,8 @@ type LigneReponse = {
 
 type LigneRestitution = {
   id: number;
-  domaine: string;
-  niveau: string | null;
+  section: string;
+  besoin: string | null;
   membres: string | null;
   outil: string;
   ressource: string;
@@ -532,7 +532,7 @@ export async function enregistrerReponse(
 }
 
 /** Champs obligatoires de la trame de restitution. */
-const CHAMPS_RESTITUTION_REQUIS = ["domaine", "outil", "ressource"] as const;
+const CHAMPS_RESTITUTION_REQUIS = ["section", "outil", "ressource"] as const;
 
 function texteOuNull(valeur: string | undefined): string | null {
   const texte = (valeur ?? "").trim();
@@ -542,7 +542,7 @@ function texteOuNull(valeur: string | undefined): string | null {
 /**
  * Enregistre la trame de restitution d'un groupe. Les clés attendues sont
  * celles de la trame :
- * domaine, niveau, membres, outil, ressource, requete, corrections,
+ * section, besoin, membres, outil, ressource, requete, corrections,
  * vigilance.
  */
 export async function enregistrerRestitution(
@@ -558,14 +558,14 @@ export async function enregistrerRestitution(
 
   await interroger(
     `insert into formation_restitution
-       (session_id, formation, domaine, niveau, membres,
+       (session_id, formation, section, besoin, membres,
         outil, ressource, requete, corrections, vigilance)
      values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
     [
       sessionId,
       formation,
-      texteOuNull(champs.domaine),
-      texteOuNull(champs.niveau),
+      texteOuNull(champs.section),
+      texteOuNull(champs.besoin),
       texteOuNull(champs.membres),
       texteOuNull(champs.outil),
       texteOuNull(champs.ressource),
@@ -819,7 +819,7 @@ export async function chargerResultats(
       [session.id],
     ),
     interroger<LigneRestitution>(
-      `select id, domaine, niveau, membres, outil, ressource,
+      `select id, section, besoin, membres, outil, ressource,
               requete, corrections, vigilance, envoye_le
          from formation_restitution
         where session_id = $1
@@ -842,8 +842,8 @@ export async function chargerResultats(
 
   const restitutions: Restitution[] = lignesRestitutions.map((ligne) => ({
     id: ligne.id,
-    domaine: ligne.domaine,
-    niveau: ligne.niveau,
+    section: ligne.section,
+    besoin: ligne.besoin,
     membres: ligne.membres,
     outil: ligne.outil,
     ressource: ligne.ressource,

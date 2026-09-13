@@ -155,7 +155,11 @@ export const assemblerUnPrompt: Module = {
           aide: "Liste, tableau ou paragraphes ? Quelle longueur / structure ?",
         },
         {
-          id: "prompt",
+          /*
+            Cet identifiant est aussi celui du champ « Le prompt ACTIF » de la
+            trame de restitution : c’est lui qui s’y retrouve pré-rempli.
+          */
+          id: "requete",
           type: "texte-long",
           libelle: "Votre prompt assemblé",
           aide: "Les cinq éléments mis bout à bout, en une seule demande — sans écrire les lettres.",
@@ -163,12 +167,12 @@ export const assemblerUnPrompt: Module = {
         },
       ],
       retour: {
-        titre: "Ce qu’on observe en séance",
+        titre: "Ce qu’on corrige en séance",
         texte:
           "Deux personnes lisent leur prompt à voix haute. On corrige uniquement ce qui manque dans ACTIF, sans réécrire tout le prompt à la place de son auteur.",
         points: [
-          "La lettre le plus souvent absente est le F : la forme attendue reste implicite.",
-          "Le C est souvent incomplet : le niveau est donné, mais pas la durée ni l’objectif.",
+          "Vérifiez le F : tant que la forme attendue n’est pas écrite, elle reste dans votre tête.",
+          "Vérifiez le C : le niveau ne suffit pas — le thème, l’objectif et la durée en font partie.",
           "Un prompt court et complet vaut mieux qu’un prompt long et flou.",
         ],
       },

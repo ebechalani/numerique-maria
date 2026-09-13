@@ -14,7 +14,7 @@
 /** Ton d'un encadré — pilote la couleur et l'icône. */
 export type TonEncadre = "info" | "attention" | "regle" | "astuce";
 
-/** Verdict d'un cas pratique, aligné sur le feu tricolore de la charte. */
+/** Verdict d'un cas pratique : autorisé, encadré ou interdit. */
 export type Verdict = "autorise" | "encadre" | "interdit";
 
 export interface Carte {

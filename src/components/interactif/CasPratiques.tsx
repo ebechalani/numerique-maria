@@ -11,7 +11,7 @@ type Choix = Record<string, Verdict | undefined>;
 /** Référence stable : évite de repasser un nouvel objet au hook à chaque rendu. */
 const AUCUN_CHOIX: Choix = {};
 
-/** Ordre du feu tricolore de la charte. */
+/** Ordre des trois verdicts, du plus permissif au plus strict. */
 const VERDICTS: Verdict[] = ["autorise", "encadre", "interdit"];
 
 /** Libellé par défaut, utilisé quand le cas n’en impose pas un autre. */
@@ -21,7 +21,7 @@ const LIBELLES: Record<Verdict, string> = {
   interdit: "Interdit",
 };
 
-/** Habillage du feu tricolore, réservé aux trois états de la charte. */
+/** Habillage des trois verdicts — vert, ambre, rouge, et rien d’autre. */
 const TONS: Record<
   Verdict,
   { propose: string; retenu: string; voile: string; texte: string }

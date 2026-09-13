@@ -96,7 +96,7 @@ export const deroule: SectionDeroule[] = [
           {
             titre: "Le tableau de bord animateur ouvert",
             texte:
-              "À la page /formations/ia-generative-maternelle/animateur, dans un troisième onglet. Il affiche le QR code du sondage d’entrée à projeter pendant l’installation, les résultats à commenter ensuite, et celui de l’enquête de satisfaction à la fin de la séance.",
+              "À la page /formations/ia-generative-maternelle/animateur, dans un troisième onglet. Il affiche les trois QR codes de la séance : le sondage d’entrée à projeter pendant l’installation — dont les résultats se commentent ensuite —, la trame de restitution à ouvrir à la fin de l’atelier de la diapositive 13, et l’enquête de satisfaction avant de quitter la salle.",
           },
         ],
       },
@@ -287,7 +287,7 @@ export const deroule: SectionDeroule[] = [
           {
             titre: "Si personne n’a de compte ChatGPT",
             texte:
-              "Faites la démonstration au vidéoprojecteur, depuis votre propre compte, et mettez les participantes en binôme pour l’atelier : l’une écrit le prompt, l’autre vérifie les cinq lettres de la check-list. L’écriture d’un prompt ACTIF ne demande pas de compte ; seule l’envoi du prompt en demande un, et il peut attendre.",
+              "Faites la démonstration au vidéoprojecteur, depuis votre propre compte, et mettez les participantes en binôme pour l’atelier : l’une écrit le prompt, l’autre vérifie les cinq lettres de la check-list. L’écriture d’un prompt ACTIF ne demande pas de compte ; seul l’envoi du prompt en demande un, et il peut attendre.",
           },
         ],
       },

@@ -95,7 +95,6 @@ export const bilanEtSuite: Module = {
         texte:
           "Une action datée et écrite est tenue ; celle qui reste une intention ne l’est pas. Relisez vos trois lignes : si la date manque ou si la préparation reste vague, l’essai n’aura pas lieu.",
       },
-      alimenteRestitution: true,
     },
 
     { type: "titre", texte: "Après la séance" },

@@ -1,10 +1,9 @@
 /**
  * Tableau de bord de l’animateur — l’écran projeté en salle.
  *
- * Il remplace trois béquilles du déroulé d’origine : l’onglet « Réponses » de
- * les résultats du sondage et de la satisfaction, le mur des restitutions,
- * et les QR codes des diapositives 2
- * et 25, désormais fabriqués ici à partir de l’adresse réelle du site.
+ * Il réunit ce que la séance projette : les résultats du sondage et de
+ * l’enquête de satisfaction, le mur des restitutions, et les QR codes des
+ * trois formulaires, fabriqués ici à partir de l’adresse réelle du site.
  *
  * Deux décisions structurent la page.
  *

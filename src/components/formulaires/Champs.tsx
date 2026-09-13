@@ -9,11 +9,11 @@
  *    sans code supplémentaire, notamment les flèches entre radios d’un même
  *    groupe ;
  *  - l’état « sélectionné » s’exprime en accent (bordure + fond accent-voile),
- *    jamais en vert / ambre / rouge : le feu tricolore reste réservé aux états
- *    autorisé, encadré, interdit de la charte ;
+ *    jamais en vert / ambre / rouge : ces trois couleurs restent réservées aux
+ *    verdicts autorisé, encadré, interdit ;
  *  - une erreur est reliée à son champ par aria-describedby et aria-invalid,
  *    et signalée par un trait d’encre — un état de formulaire n’est pas un
- *    verdict de la charte, il ne prend donc pas la couleur rouge.
+ *    verdict, il ne prend donc pas la couleur rouge.
  *
  * Chaque composant reçoit `id` : c’est l’identifiant DOM du premier contrôle
  * du champ, celui que le formulaire met au focus quand la validation échoue.
@@ -222,7 +222,7 @@ export function OptionCliquable({
   );
 }
 
-/** Trait d’encre porté par le groupe fautif — sobre, hors feu tricolore. */
+/** Trait d’encre porté par le groupe fautif — sobre, hors couleurs de verdict. */
 function classesGroupe(erreur?: string): string {
   return erreur ? "mt-3 space-y-2 border-l-2 border-encre-clair pl-3" : "mt-3 space-y-2";
 }

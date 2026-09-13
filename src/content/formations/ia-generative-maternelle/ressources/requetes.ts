@@ -42,8 +42,9 @@ const CLES_ACTIF: Record<LettreActif, BriqueRequete["cle"]> = {
 };
 
 /**
- * Les briques sont dérivées de la méthode : titre, question, premier exemple
- * et texte d’attente viennent du diaporama, sans réécriture.
+ * Les briques sont dérivées de la méthode : titre, question et premier exemple
+ * viennent du diaporama, sans réécriture ; le texte d’attente reprend
+ * l’indication de saisie de la fiche méthode.
  */
 export const briquesRequete: BriqueRequete[] = METHODE_ACTIF.map((element) => ({
   cle: CLES_ACTIF[element.lettre],
@@ -59,9 +60,9 @@ export const briquesRequete: BriqueRequete[] = METHODE_ACTIF.map((element) => ({
 
 /**
  * Douze requêtes rédigées selon ACTIF, pour la maternelle. Les crochets
- * marquent ce que l’enseignante remplace par sa situation réelle. Ne jamais y
- * coller de données personnelles d’enfants — utiliser « enfant A »,
- * « enfant B ».
+ * marquent ce que l’enseignante remplace par sa situation réelle, en évitant
+ * d’envoyer des données sensibles ou identifiantes sur les élèves
+ * (réflexe « Protéger », diapositive 16).
  */
 export const bibliothequeRequetes: LigneRequete[] = [
   {
@@ -91,7 +92,7 @@ export const bibliothequeRequetes: LigneRequete[] = [
   {
     usage: "Comptine ou rituel",
     requete:
-      "« Tu es un expert en langage oral pour les 4–5 ans. Ma classe de [niveau] travaille le thème [thème] et le rituel d’accueil dure 5 minutes. Écris une comptine de 4 vers courts qui reprend les mots [mot 1], [mot 2] et [mot 3], et propose un geste pour chaque vers. Utilise un ton simple, bienveillant et adapté à des enfants de [4–5] ans. Présente le résultat dans un tableau : Vers | Geste. »",
+      "« Tu es un expert en langage oral pour les 4–5 ans. Ma classe de [niveau] travaille le thème [thème] et le rituel d’accueil dure [5 minutes]. Écris une comptine de 4 vers courts qui reprend les mots [mot 1], [mot 2] et [mot 3], et propose un geste pour chaque vers. Utilise un ton simple, bienveillant et adapté à des enfants de [4–5] ans. Présente le résultat dans un tableau : Vers | Geste. »",
     outil: "chatgpt",
   },
   {
@@ -104,7 +105,7 @@ export const bibliothequeRequetes: LigneRequete[] = [
     usage: "Différenciation PS / MS / GS",
     requete:
       "« Tu es un assistant pédagogique spécialisé en maternelle. J’ai préparé l’activité suivante : [activité], sur le thème [thème]. Décline-la en trois versions, pour la Petite, la Moyenne et la Grande Section. Utilise un vocabulaire simple et clair, et une consigne dicible en une phrase. Présente le résultat dans un tableau : Section | Consigne donnée aux enfants | Ce que je regarde. »",
-    outil: "les-deux",
+    outil: "chatgpt",
   },
   {
     usage: "Relancer la première réponse",
@@ -115,7 +116,7 @@ export const bibliothequeRequetes: LigneRequete[] = [
   {
     usage: "Synthèse d’un document",
     requete:
-      "« Tu es mon assistant pédagogique en maternelle. Les sources de ce notebook sont [documents importés] et je dois les présenter à l’équipe de cycle. Résume-les en 8 points clés et cite pour chaque point le passage de la source. Utilise un vocabulaire simple et clair. Présente le résultat sous forme de puces, une phrase par point. »",
+      "« Tu es mon assistant pédagogique en maternelle. Les sources de ce notebook sont [documents importés] et je dois les présenter [à l’équipe de cycle]. Résume-les en 8 points clés et cite pour chaque point le passage de la source. Utilise un vocabulaire simple et clair. Présente le résultat sous forme de puces, une phrase par point. »",
     outil: "notebooklm",
   },
   {

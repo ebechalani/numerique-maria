@@ -6,12 +6,13 @@ import type { QuestionFrequente } from "@/content/types";
  *
  * Douze questions posées en séance, avec des réponses qui ne disent rien de
  * plus que le diaporama. Source : diapositives 5 et 11 et leurs notes (la
- * longueur du prompt, les lettres qu’on n’écrit pas), 12 et 14 (la reprise
- * après la première réponse), 15 et sa note (comment ChatGPT produit une
- * réponse, la recherche web), 16 (vérifier, protéger, itérer), 17 et 18
- * (NotebookLM et les sources acceptées), 19 (le workflow et les citations),
- * 20 (la démonstration) et 21 (l’action à mener dès cette semaine, et les
- * références citées en note : OpenAI Help Center, Google NotebookLM Help).
+ * longueur du prompt, les lettres qu’on n’écrit pas), 12, 13 et 14 (la demande
+ * vague, l’atelier en une phrase, la reprise après la première réponse), 15 et
+ * sa note (comment ChatGPT produit une réponse, la recherche web), 16
+ * (vérifier, protéger, itérer), 17 et 18 (NotebookLM et les sources
+ * acceptées), 19 (le workflow et les citations) et 21 (l’action à mener dès
+ * cette semaine, et les références citées en note : OpenAI Help Center,
+ * Google NotebookLM Help).
  */
 export const questionsFrequentes: QuestionFrequente[] = [
   {

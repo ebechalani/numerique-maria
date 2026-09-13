@@ -20,7 +20,7 @@ export const quEstCeQuUnPrompt: Module = {
     {
       type: "paragraphe",
       texte:
-        "Avant toute méthode, une question simple : de quoi parle-t-on ? La séquence commence donc par un échauffement en binôme, avant que la définition ne soit donnée. Elle se termine par l’annonce des cinq lettres qui structureront la suite de la matinée.",
+        "Avant toute méthode, une question simple : de quoi parle-t-on ? La séquence commence donc par un échauffement en binôme, avant que la définition ne soit donnée. Elle se termine par l’annonce des cinq lettres qui structureront la suite de la séance.",
     },
 
     { type: "titre", texte: "Échauffement : la question avant la réponse" },
@@ -76,7 +76,7 @@ export const quEstCeQuUnPrompt: Module = {
     {
       type: "paragraphe",
       texte:
-        "Ces cinq informations forment la méthode ACTIF, que nous détaillerons lettre par lettre dans la séquence suivante. À ce stade, il suffit de les connaître de nom : ce sont cinq questions faciles à vérifier avant d’envoyer une demande.",
+        "Ces cinq informations forment la méthode ACTIF, que nous détaillerons lettre par lettre dans la séquence suivante. À ce stade, il suffit de les connaître de nom : ce sont cinq informations faciles à vérifier avant d’envoyer une demande.",
     },
     {
       type: "tableau",
@@ -105,7 +105,7 @@ export const quEstCeQuUnPrompt: Module = {
           affirmation: "« Propose 5 idées. » est trop court pour être un prompt.",
           reponse: false,
           explication:
-            "C’est l’un des quatre exemples de demandes du diaporama : une demande courte reste un prompt. Ce qui compte n’est pas sa longueur, mais ce qu’elle précise.",
+            "C’est l’un des quatre exemples de demandes du support : une demande courte reste un prompt. Ce qui compte n’est pas sa longueur, mais ce qu’elle précise.",
         },
         {
           affirmation: "Un prompt long est forcément un meilleur prompt.",

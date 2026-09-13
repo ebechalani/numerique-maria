@@ -61,7 +61,7 @@ export const notebookLm: Module = {
       type: "citation",
       texte:
         "Google décrit NotebookLM comme un assistant de recherche alimenté par l’IA. Il peut travailler à partir de PDF, documents Google, pages web, audio et vidéo, puis répondre avec des citations liées aux sources.",
-      source: "Google — Aide NotebookLM, « Learn about NotebookLM »",
+      source: "Google NotebookLM Help — « Learn about NotebookLM »",
     },
 
     { type: "titre", texte: "Ce qu’il peut produire" },
@@ -202,7 +202,6 @@ export const notebookLm: Module = {
         texte:
           "NotebookLM aide à retrouver la source, mais l’enseignant relit toujours le passage important. La citation raccourcit la vérification — elle ne la remplace pas.",
       },
-      alimenteRestitution: true,
     },
 
     {

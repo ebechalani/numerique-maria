@@ -13,9 +13,11 @@ import type { Questionnaire, ChampRestitution } from "@/content/types";
  * projetés en direct : ils servent à caler la séance sur les usages réels des
  * enseignantes de maternelle plutôt que sur des généralités.
  *
- * Aucun champ nominatif nulle part : ni nom, ni adresse, ni identifiant. La
- * trame de restitution rappelle en plus qu’aucune donnée d’enfant ne doit y
- * figurer — c’est le réflexe « Protéger » de la diapositive 16.
+ * Les deux questionnaires sont anonymes : ni nom, ni adresse, ni identifiant.
+ * La seule identité du site est le champ « membres du groupe » de la trame de
+ * restitution — celle d’adultes, saisie volontairement, jamais affichée sur le
+ * mur des contributions. La trame rappelle en plus qu’aucune donnée d’enfant ne
+ * doit y figurer — c’est le réflexe « Protéger » de la diapositive 16.
  */
 
 /* ------------------------------------------------------------------ */
@@ -80,7 +82,7 @@ export const enqueteSatisfaction: Questionnaire = {
   slug: "satisfaction",
   titre: "Enquête de satisfaction",
   intro:
-    "Quatre questions, deux minutes, avant de quitter la salle. Les trois premières reprennent les objectifs annoncés au début : mieux formuler, mieux dialoguer, mieux exploiter vos sources. Les réponses sont anonymes : ni nom, ni adresse, ni identifiant. Elles servent à améliorer la séance et à choisir l’atelier suivant.",
+    "Quatre questions, deux minutes, avant de quitter la salle. Les trois premières reprennent les objectifs annoncés au début : mieux formuler, mieux dialoguer, mieux exploiter vos sources. Les réponses sont anonymes : ni nom, ni adresse, ni identifiant. Elles servent à améliorer la séance et à cerner les besoins qui restent.",
   remerciement:
     "Merci pour votre retour. Votre prochaine action tient en une phrase : choisissez une préparation de la semaine et testez un prompt ACTIF, puis comparez le temps gagné et la qualité obtenue.",
   moment: "À la fin de la séance — 2 minutes",
@@ -132,21 +134,28 @@ export const enqueteSatisfaction: Questionnaire = {
 /* ------------------------------------------------------------------ */
 
 /**
- * Ce que chacune dépose après l’atelier « À vous de jouer ! » : le prompt
+ * Ce que chaque groupe dépose après l’atelier « À vous de jouer ! » : le prompt
  * rédigé, ce que l’IA en a fait, et ce qu’il a fallu corriger.
  *
- * Les identifiants « acteur », « contexte », « tache », « intention »,
- * « format » et « prompt » sont ceux de l’exercice « exercice-prompt-actif » du
- * module 3 : le brouillon s’y pré-remplit tout seul, il ne reste qu’à raconter
- * le résultat obtenu.
+ * Les identifiants sont ceux que la collecte attend, sans exception :
+ * « section », « besoin », « membres », « outil », « ressource », « requete »,
+ * « corrections » et « vigilance ». Ce sont les colonnes de la table des
+ * restitutions, les clés que la route de dépôt accepte et l’ordre d’affichage
+ * du mur des contributions comme du tableau de bord animateur.
  *
- * Aucun champ nominatif : les dépôts alimentent la mise en commun, pas un
- * relevé individuel.
+ * « requete » est aussi l’identifiant du champ « Votre prompt assemblé » de
+ * l’exercice « exercice-prompt-actif » du module 3, qui alimente la
+ * restitution : le prompt s’y retrouve pré-rempli, il ne reste qu’à raconter le
+ * résultat obtenu.
+ *
+ * Un seul champ nominatif, « membres du groupe » : celui d’adultes, facultatif,
+ * visible du seul animateur.
  */
 export const champsRestitution: ChampRestitution[] = [
   {
-    id: "niveau",
+    id: "section",
     libelle: "Niveau de la classe",
+    aide: "Il sert de titre à votre contribution sur le mur des collègues.",
     type: "choix",
     options: [
       "Petite Section",
@@ -157,6 +166,12 @@ export const champsRestitution: ChampRestitution[] = [
     obligatoire: true,
   },
   {
+    id: "membres",
+    libelle: "Membres du groupe",
+    aide: "Les prénoms suffisent : inutile d’indiquer les noms complets. Ce champ ne figure pas sur le mur des contributions.",
+    type: "texte",
+  },
+  {
     id: "besoin",
     libelle: "Le besoin de la semaine",
     aide: "La préparation réelle que vous avez choisie : un atelier de langage, un rituel, une comptine, une séance de motricité…",
@@ -164,50 +179,28 @@ export const champsRestitution: ChampRestitution[] = [
     obligatoire: true,
   },
   {
-    id: "acteur",
-    libelle: "A — Acteur / Identité",
-    aide: "Le rôle donné à l’IA, par exemple « Tu es mon assistant pédagogique en maternelle ».",
-    type: "texte",
+    id: "outil",
+    libelle: "L’outil utilisé",
+    type: "choix",
+    options: ["ChatGPT", "NotebookLM"],
+    obligatoire: true,
   },
   {
-    id: "contexte",
-    libelle: "C — Contexte",
-    aide: "Le niveau, le thème, l’objectif et la durée visée.",
-    type: "texte",
-  },
-  {
-    id: "tache",
-    libelle: "T — Tâche / Action",
-    aide: "L’action concrète attendue : produire, expliquer, reformuler, comparer, corriger…",
-    type: "texte",
-  },
-  {
-    id: "intention",
-    libelle: "I — Intention / Tonalité",
-    aide: "Le niveau de langage et le ton demandés, pour des enfants de 3 à 5 ans.",
-    type: "texte",
-  },
-  {
-    id: "format",
-    libelle: "F — Format",
-    aide: "La forme attendue : liste, tableau, puces, longueur.",
-    type: "texte",
-  },
-  {
-    id: "prompt",
+    id: "requete",
     libelle: "Votre prompt assemblé",
-    aide: "Collez-le tel quel : c’est lui qui sert aux collègues. Aucune donnée d’enfant ne doit y figurer — ni prénom, ni observation nominative.",
+    aide: "Collez-le tel quel, avec ses cinq éléments ACTIF : rôle, contexte, tâche, ton, format. C’est lui qui sert aux collègues. Aucune donnée d’enfant ne doit y figurer — ni prénom, ni observation nominative.",
     type: "texte-long",
     obligatoire: true,
   },
   {
-    id: "resultat",
+    id: "ressource",
     libelle: "Ce que l’IA a répondu, en deux ou trois phrases",
     aide: "Directement exploitable, à retravailler un peu, hors sujet ? Dites-le simplement.",
     type: "texte-long",
+    obligatoire: true,
   },
   {
-    id: "ajustement",
+    id: "corrections",
     libelle: "Ce qu’il a fallu corriger ou relancer",
     aide: "Les relances du type « refais plus court », « mets en tableau », « adapte à la MS », et ce qui manquait dans la première réponse.",
     type: "texte-long",
