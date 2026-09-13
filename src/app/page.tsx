@@ -10,6 +10,7 @@ import {
   SIGNATURE,
 } from "@/content/site";
 import { formations } from "@/lib/formations";
+import { tutoriels } from "@/lib/tutoriels";
 
 export const metadata: Metadata = {
   description: `Le catalogue des formations d’${SIGNATURE} de ${ETABLISSEMENT.nom}.`,
@@ -208,6 +209,43 @@ export default function Accueil() {
             </Link>
           </li>
 
+          <li className="mt-4">
+            <Link
+              href="/tutoriels"
+              className="group flex items-start gap-5 rounded-lg border border-trait bg-craie p-6 transition-colors hover:border-accent hover:bg-accent-voile"
+            >
+              <span
+                aria-hidden="true"
+                className="hidden shrink-0 items-center gap-1 sm:flex"
+              >
+                {["1", "2", "3", "4"].map((rang) => (
+                  <span
+                    key={rang}
+                    className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-encre font-serif text-xs font-semibold text-papier"
+                  >
+                    {rang}
+                  </span>
+                ))}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="text-sm text-accent">
+                  {tutoriels.map((tutoriel) => tutoriel.outil).join(" · ")}
+                </span>
+                <span className="mt-1 block font-serif text-2xl leading-tight text-encre">
+                  Tutoriels des outils
+                </span>
+                <span className="mt-2 block max-w-3xl leading-relaxed text-graphite">
+                  La prise en main de chaque outil, pas à pas : créer, importer,
+                  interroger, vérifier, partager — avec une check-list à cocher
+                  pendant qu’on manipule.
+                </span>
+                <span className="mt-4 flex items-center gap-2 text-sm font-medium text-accent">
+                  Voir les tutoriels
+                  <Fleche className="transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </span>
+            </Link>
+          </li>
         </ul>
       </section>
 

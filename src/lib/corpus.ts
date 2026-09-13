@@ -13,7 +13,9 @@
  */
 
 import type { Bloc, Formation, Verdict } from "@/content/types";
+import type { Tutoriel } from "@/content/tutoriels/types";
 import { briquesRequete, formations, getRessource } from "./formations";
+import { tutoriels } from "./tutoriels";
 
 /* ------------------------------------------------------------------ */
 /* Utilitaires de mise en forme                                        */
@@ -329,12 +331,47 @@ function formationEnTexte(formation: Formation): string {
   ]);
 }
 
+function tutorielEnTexte(tutoriel: Tutoriel): string {
+  const identite = joindre([
+    `# Tutoriel — ${tutoriel.outil} (slug: ${tutoriel.slug})`,
+    tutoriel.sousTitre,
+    tutoriel.accroche,
+    [
+      `- Éditeur : ${tutoriel.editeur}`,
+      `- Adresse : ${tutoriel.adresse}`,
+      `- Accès : ${tutoriel.cout}`,
+      `- Durée : ${tutoriel.duree}`,
+      `- ${tutoriel.interfaceDecrite}`,
+    ].join("\n"),
+  ]);
+
+  const prerequis = joindre([
+    "## Avant de commencer",
+    tutoriel.prerequis.map((item) => `- ${item.titre} : ${item.texte}`).join("\n"),
+  ]);
+
+  const liens = joindre([
+    "## Pour aller plus loin",
+    tutoriel.liens
+      .map((lien) => {
+        const description = lien.description ? ` — ${lien.description}` : "";
+        return `- ${lien.libelle} : ${lien.href}${description}`;
+      })
+      .join("\n"),
+  ]);
+
+  return joindre([identite, prerequis, blocsEnTexte(tutoriel.blocs), liens]);
+}
+
 /**
- * Sérialise l’intégralité du contenu publié en Markdown lisible.
+ * Sérialise l’intégralité du contenu publié en Markdown lisible : les
+ * formations d’abord, les tutoriels d’outils ensuite.
  * Appelée une fois au chargement du module ; le résultat est figé dans CORPUS.
  */
 export function construireCorpus(): string {
-  return formations.map(formationEnTexte).join("\n\n---\n\n");
+  return [...formations.map(formationEnTexte), ...tutoriels.map(tutorielEnTexte)].join(
+    "\n\n---\n\n",
+  );
 }
 
 /** Base de connaissance de l’assistant, calculée une seule fois. */
