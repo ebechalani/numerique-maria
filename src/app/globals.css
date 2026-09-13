@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/*
+  Système visuel — Providence, plateforme de formation.
+  Registre : institutionnel et sobre. Encre profonde, papier chaud, un seul
+  accent (sarcelle) pour l'interactif — volontairement distinct du vert /
+  ambre / rouge, réservés aux verdicts des cas pratiques (autorisé, encadré,
+  interdit) et qui ne doivent jamais servir de décor.
+*/
+@theme {
+  /* Fonds et surfaces */
+  --color-papier: #fbfaf7;
+  --color-craie: #ffffff;
+  --color-voile: #f4f2ed;
+  --color-trait: #e3ded3;
+  --color-trait-fort: #cec7b8;
+
+  /* Texte */
+  --color-encre: #16243b;
+  --color-encre-clair: #2c4368;
+  --color-graphite: #5a6472;
+  --color-estompe: #8b93a0;
+
+  /* Accent interactif */
+  --color-accent: #0e7490;
+  --color-accent-fort: #0b5c73;
+  --color-accent-voile: #ecfeff;
+
+  /* Verdicts des cas pratiques — usage réservé */
+  --color-vert: #15803d;
+  --color-vert-voile: #ecfdf3;
+  --color-vert-trait: #a6f4c5;
+  --color-ambre: #b45309;
+  --color-ambre-voile: #fffbeb;
+  --color-ambre-trait: #fed7aa;
+  --color-rouge: #b42318;
+  --color-rouge-voile: #fef3f2;
+  --color-rouge-trait: #fecdca;
+
+  /* Typographie */
+  --font-sans: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+    "Times New Roman", serif;
+  --font-mono: "Cascadia Mono", "SF Mono", Menlo, Consolas, monospace;
+
+  /* Rythme */
+  --radius-carte: 0.625rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* compense l'en-tête collant lors des sauts d'ancre */
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background-color: var(--color-papier);
+  color: var(--color-encre);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Anneau de focus homogène et visible au clavier sur tout le site. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Le contenu rédactionnel long se lit mieux en serif. */
+.prose-formation p {
+  line-height: 1.7;
+}
+
+@media print {
+  .sans-impression {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
