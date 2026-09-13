@@ -14,10 +14,14 @@
 
 import type { Tutoriel } from "@/content/tutoriels/types";
 
+import { chatGpt } from "@/content/tutoriels/chatgpt";
 import { notebookLm } from "@/content/tutoriels/notebooklm";
 
-/** Tous les tutoriels publiés, dans l’ordre d’affichage du catalogue. */
-export const tutoriels: Tutoriel[] = [notebookLm];
+/**
+ * Tous les tutoriels publiés, dans l’ordre d’affichage du catalogue — celui de
+ * la formation : ChatGPT est présenté au module 4, NotebookLM au module 5.
+ */
+export const tutoriels: Tutoriel[] = [chatGpt, notebookLm];
 
 export function getTutoriel(slug: string): Tutoriel | undefined {
   return tutoriels.find((tutoriel) => tutoriel.slug === slug);
@@ -28,4 +32,4 @@ export function getTutoriel(slug: string): Tutoriel | undefined {
  * le catalogue pour que l’absence soit annoncée plutôt que subie ; vider le
  * tableau fait disparaître la mention.
  */
-export const tutorielsAVenir: string[] = ["ChatGPT"];
+export const tutorielsAVenir: string[] = [];

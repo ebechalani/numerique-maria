@@ -372,5 +372,11 @@ export const notebookLm: Tutoriel = {
       description:
         "La documentation de Google : formats acceptés, limites du jour, nouveautés.",
     },
+    {
+      libelle: "Tutoriel ChatGPT",
+      href: "/tutoriels/chatgpt",
+      description:
+        "L’autre outil de la formation, pour produire à partir de rien plutôt qu’à partir d’un document.",
+    },
   ],
 };

@@ -46,6 +46,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /* Éléments de page                                                    */
 /* ------------------------------------------------------------------ */
 
+/** Vrai pour une adresse du site, fausse pour un lien externe. */
+function estInterne(href: string): boolean {
+  return href.startsWith("/");
+}
+
+/** Flèche des liens internes — même famille que les cartes du catalogue. */
+function FlecheInterne() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="h-4 w-4 shrink-0"
+    >
+      <path d="M5 12h14" />
+      <path d="M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+
 function FlecheSortante() {
   return (
     <svg
@@ -183,16 +207,14 @@ export default async function PageTutoriel({ params }: Props) {
           Pour aller plus loin
         </h2>
         <ul className="sans-impression mt-3 space-y-2">
-          {tutoriel.liens.map((lien) => (
-            <li key={lien.href}>
-              <a
-                href={lien.href}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-start gap-2 text-accent transition-colors hover:text-accent-fort"
-              >
+          {tutoriel.liens.map((lien) => {
+            const interne = estInterne(lien.href);
+            const classe =
+              "inline-flex items-start gap-2 text-accent transition-colors hover:text-accent-fort";
+            const corps = (
+              <>
                 <span className="mt-0.5">
-                  <FlecheSortante />
+                  {interne ? <FlecheInterne /> : <FlecheSortante />}
                 </span>
                 <span>
                   <span className="underline decoration-trait-fort underline-offset-2">
@@ -204,9 +226,28 @@ export default async function PageTutoriel({ params }: Props) {
                     </span>
                   ) : null}
                 </span>
-              </a>
-            </li>
-          ))}
+              </>
+            );
+
+            return (
+              <li key={lien.href}>
+                {interne ? (
+                  <Link href={lien.href} className={classe}>
+                    {corps}
+                  </Link>
+                ) : (
+                  <a
+                    href={lien.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className={classe}
+                  >
+                    {corps}
+                  </a>
+                )}
+              </li>
+            );
+          })}
         </ul>
 
         {tutoriel.renvoiModule ? (

@@ -39,7 +39,7 @@ comme fil rouge et complétés pour l’élémentaire, le collège et le lycée.
   compose un prompt en cinq étapes et le rend prêt à coller.
 - **Tutoriels d’outils** : la prise en main de chaque outil utilisé en
   formation, pas à pas, avec une check-list à cocher pendant qu’on manipule.
-  Publié à ce jour : NotebookLM. Ces tutoriels alimentent aussi l’assistant.
+  Publiés à ce jour : ChatGPT et NotebookLM. Ils alimentent aussi l’assistant.
 - **Ressources** : fiche méthode ACTIF, bibliothèque de dix-neuf requêtes
   classées par cycle, questions fréquentes, déroulé animateur.
 

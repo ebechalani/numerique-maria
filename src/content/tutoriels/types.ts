@@ -11,7 +11,11 @@
 
 import type { Bloc } from "@/content/types";
 
-/** Un lien sortant : documentation officielle, page de connexion… */
+/**
+ * Un lien de fin de page : documentation officielle, page de connexion, ou
+ * page du site. Une adresse commençant par « / » est traitée comme interne et
+ * s’ouvre dans le même onglet.
+ */
 export interface LienTutoriel {
   libelle: string;
   href: string;
