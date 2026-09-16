@@ -15,13 +15,17 @@
 import type { Tutoriel } from "@/content/tutoriels/types";
 
 import { chatGpt } from "@/content/tutoriels/chatgpt";
+import { coggle } from "@/content/tutoriels/coggle";
+import { keamk } from "@/content/tutoriels/keamk";
 import { notebookLm } from "@/content/tutoriels/notebooklm";
 
 /**
- * Tous les tutoriels publiés, dans l’ordre d’affichage du catalogue — celui de
- * la formation : ChatGPT est présenté au module 4, NotebookLM au module 5.
+ * Tous les tutoriels publiés, dans l’ordre d’affichage du catalogue : d’abord
+ * les deux outils de la formation, dans l’ordre où elle les présente — ChatGPT
+ * au module 4, NotebookLM au module 5 — puis les autres outils du quotidien
+ * numérique, qui ne relèvent d’aucun module.
  */
-export const tutoriels: Tutoriel[] = [chatGpt, notebookLm];
+export const tutoriels: Tutoriel[] = [chatGpt, notebookLm, coggle, keamk];
 
 export function getTutoriel(slug: string): Tutoriel | undefined {
   return tutoriels.find((tutoriel) => tutoriel.slug === slug);

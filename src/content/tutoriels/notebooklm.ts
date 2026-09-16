@@ -23,7 +23,6 @@ export const notebookLm: Tutoriel = {
   adresse: "https://notebooklm.google.com",
   cout: "Gratuit, avec un compte Google",
   duree: "20 minutes pour un premier carnet",
-  icone: "livre",
   interfaceDecrite: "Interface de NotebookLM au printemps 2026",
 
   renvoiModule: {

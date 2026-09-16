@@ -52,10 +52,8 @@ export interface Tutoriel {
   cout: string;
   /** Temps à prévoir pour venir à bout du tutoriel. */
   duree: string;
-  /** Nom d’icône libre, interprété par le catalogue. */
-  icone: string;
   /**
-   * Version de l’interface décrite. Les outils d’IA changent vite : cette
+   * Version de l’interface décrite. Les outils en ligne changent vite : cette
    * mention est affichée en tête de page, avec le lien vers l’aide officielle,
    * pour qu’un écran qui ne correspond plus ne laisse personne bloqué.
    */

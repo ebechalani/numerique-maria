@@ -129,7 +129,10 @@ export default async function PageTutoriel({ params }: Props) {
       </nav>
 
       <header className="mt-5">
-        <p className="text-sm text-accent">{tutoriel.editeur}</p>
+        {/* L’éditeur n’est rappelé que s’il ne porte pas le nom de l’outil. */}
+        {tutoriel.editeur !== tutoriel.outil ? (
+          <p className="text-sm text-accent">{tutoriel.editeur}</p>
+        ) : null}
         <h1 className="mt-2 font-serif text-4xl leading-tight text-encre sm:text-5xl">
           {tutoriel.outil}
         </h1>
@@ -167,7 +170,7 @@ export default async function PageTutoriel({ params }: Props) {
         </dl>
 
         <p className="mt-4 text-sm leading-relaxed text-estompe">
-          {tutoriel.interfaceDecrite}. Les outils d’IA changent souvent
+          {tutoriel.interfaceDecrite}. Les outils en ligne changent souvent
           d’apparence : si un écran ne correspond plus à ce qui est décrit, la
           documentation officielle, liée en bas de page, fait foi.
         </p>
