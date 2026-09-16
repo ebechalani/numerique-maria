@@ -235,8 +235,8 @@ export default function Accueil() {
                   Tutoriels des outils
                 </span>
                 <span className="mt-2 block max-w-3xl leading-relaxed text-graphite">
-                  La prise en main de chaque outil, pas à pas : créer, importer,
-                  interroger, vérifier, partager — avec une check-list à cocher
+                  La prise en main de chaque outil, pas à pas — ceux de la
+                  formation comme les autres — avec une check-list à cocher
                   pendant qu’on manipule.
                 </span>
                 <span className="mt-4 flex items-center gap-2 text-sm font-medium text-accent">

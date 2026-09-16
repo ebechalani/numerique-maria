@@ -36,9 +36,10 @@ comme fil rouge et complétés pour l’élémentaire, le collège et le lycée.
   du contenu de la formation, et cite le module ou la ressource source.
 - **Rédacteur de prompt ACTIF** : un outil autonome, hors formation, qui
   compose un prompt en cinq étapes et le rend prêt à coller.
-- **Tutoriels d’outils** : la prise en main de chaque outil utilisé en
-  formation, pas à pas, avec une check-list à cocher pendant qu’on manipule.
-  Publiés à ce jour : ChatGPT et NotebookLM. Ils alimentent aussi l’assistant.
+- **Tutoriels d’outils** : la prise en main de chaque outil, pas à pas, avec
+  une check-list à cocher pendant qu’on manipule. Publiés à ce jour : ChatGPT
+  et NotebookLM, vus en formation, puis Coggle et Keamk. Ils alimentent aussi
+  l’assistant.
 - **Ressources** : fiche méthode ACTIF, bibliothèque de dix-neuf requêtes
   classées par cycle, questions fréquentes, déroulé animateur.
 

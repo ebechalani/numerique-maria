@@ -13,7 +13,7 @@ import { tutoriels, tutorielsAVenir } from "@/lib/tutoriels";
 export const metadata: Metadata = {
   title: "Tutoriels",
   description:
-    "La prise en main des outils utilisés en formation, pas à pas : créer, importer, interroger, vérifier, partager.",
+    "La prise en main des outils du quotidien numérique, pas à pas, avec une check-list à cocher pendant qu’on manipule.",
 };
 
 /** Point médian de séparation, purement décoratif. */
@@ -68,9 +68,10 @@ export default function PageTutoriels() {
           Tutoriels
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-graphite">
-          La prise en main des outils utilisés en formation, pas à pas. Chaque
-          tutoriel se lit seul, sans avoir suivi la séance, et se termine par une
-          check-list à cocher pendant qu’on manipule.
+          La prise en main des outils du quotidien numérique, pas à pas — ceux
+          de la formation comme les autres. Chaque tutoriel se lit seul, sans
+          avoir suivi la séance, et se termine par une check-list à cocher
+          pendant qu’on manipule.
         </p>
       </header>
 
@@ -81,7 +82,10 @@ export default function PageTutoriels() {
               href={`/tutoriels/${tutoriel.slug}`}
               className="group block rounded-lg border border-trait bg-craie p-6 transition-colors hover:border-accent hover:bg-accent-voile sm:p-8"
             >
-              <p className="text-sm text-accent">{tutoriel.editeur}</p>
+              {/* L’éditeur n’est rappelé que s’il ne porte pas le nom de l’outil. */}
+              {tutoriel.editeur !== tutoriel.outil ? (
+                <p className="text-sm text-accent">{tutoriel.editeur}</p>
+              ) : null}
               <h2 className="mt-1 font-serif text-2xl leading-tight text-encre sm:text-3xl">
                 {tutoriel.outil}
               </h2>

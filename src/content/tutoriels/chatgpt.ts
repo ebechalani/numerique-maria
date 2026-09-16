@@ -26,7 +26,6 @@ export const chatGpt: Tutoriel = {
   adresse: "https://chatgpt.com",
   cout: "Offre gratuite, avec un compte",
   duree: "15 minutes pour prendre la main",
-  icone: "outils",
   interfaceDecrite: "Interface de ChatGPT au printemps 2026",
 
   renvoiModule: {
